@@ -121,6 +121,9 @@
     &_second {
         font-size: 12px;
         border: 1px solid #FFFFFF;
+        @media (max-width: 768px) {
+            font-size: 10px;
+        }
 
         span {
             max-width: 224px;
@@ -190,6 +193,7 @@
 
     &__button {
         width: 30%;
+        height: 71px;
 
         @media (max-width: 768px) {
             width: 100%;
