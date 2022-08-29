@@ -81,7 +81,6 @@ body {
   font-weight: 400;
   font-family: "Lora";
   color: #343434;
-  overflow: auto;
 }
 
 .wrapper {
@@ -312,10 +311,6 @@ body {
   background: rgba(10, 10, 10, 0.35);
   visibility: hidden;
   opacity: 0;
-  overflow-y: scroll;
-  min-height: -webkit-fit-content;
-  min-height: -moz-fit-content;
-  min-height: fit-content;
   transition: visibility 0s linear 0.3s, opacity 0.3s;
 }
 
@@ -330,9 +325,6 @@ body {
   z-index: 9999;
   top: 20%;
   left: 50%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   max-width: 615px;
   background-color: #fff;
   box-shadow: 0 0 1.5em hsla(0deg, 0%, 0%, 0.35);

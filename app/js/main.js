@@ -243,7 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       modal_action.classList.add("is-visible");
       sessionStorage.setItem("first", false);
-    }, 0);
+    }, 10000);
   }
 
   let modal__close = document.querySelectorAll(".modal-close");
