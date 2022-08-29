@@ -1,0 +1,133 @@
+.footer {
+    background: $color-gray-light;
+    padding-top: 56px;
+    font-family: 'GothamPro';
+    line-height: 30px;
+    color: $color-dark;
+
+    @media (max-width: 768px) {
+        padding-top: 25px;
+        text-align: center;
+        &__empty {
+            display: none;
+        }
+
+        &__links {
+            display: none;
+        }
+    }
+
+    &__under {
+        background: $color-violet;
+        color: $color-white;
+        padding-top: 36px;
+        padding-bottom: 36px;
+
+        @media (max-width: 768px) {
+            padding-top: 24px;
+            padding-bottom: 18px;
+        }
+
+        span {
+            &:first-child {
+                margin-right: 36px;
+            }
+            @media (max-width: 768px) {
+                display: block;
+            }
+        }
+    }
+
+    &__links {
+        margin-top: 18px;
+
+        &_first {
+            display: none;
+
+            a {
+                display: block;
+                margin-bottom: 4px;
+                text-align: left;
+            }
+
+            div {
+                width: fit-content;
+            }
+
+            @media (max-width: 768px) {
+                display: flex;
+                justify-content:space-around;
+            }
+        }
+
+        @media (max-width: 768px) {
+            text-align: center;
+        }
+
+        a {
+            display: block;
+            margin-bottom: 4px;
+        }
+    }
+
+    a {
+        color: $color-dark;
+    }
+
+    img {
+        display: inline-block;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 2fr 1fr;
+        row-gap: 38px;
+        column-gap: 48px;
+        padding-bottom: 20px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        row-gap: 22px;
+
+        @media (max-width: 768px) {
+            align-items: center;
+        }
+    }
+
+    &__pins {
+        div {
+            img {
+                margin-right: 8px;
+            }
+
+            &:first-child {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    &__social {
+        img {
+            &:first-child {
+                margin-right: 20px;
+            }
+        }
+    }
+
+    &__agreement {
+        a {
+            font-size: 16px;
+            text-decoration-line: underline;
+            color: #666981;
+            display: block;
+        }
+    }
+}
