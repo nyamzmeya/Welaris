@@ -1,5 +1,5 @@
 .footer {
-    background: $color-gray-light;
+    background: $color-gray;
     padding-top: 56px;
     font-family: 'GothamPro';
     line-height: 30px;
@@ -8,6 +8,9 @@
     @media (max-width: 768px) {
         padding-top: 25px;
         text-align: center;
+        @media (max-width: 576px) {
+            text-align: left;
+        }
         &__empty {
             display: none;
         }
@@ -57,6 +60,10 @@
             @media (max-width: 768px) {
                 display: flex;
                 justify-content:space-around;
+                column-gap: 32px;
+                @media (max-width: 576px) {
+                    justify-content:flex-start;
+                }
             }
         }
 
@@ -99,6 +106,9 @@
 
         @media (max-width: 768px) {
             align-items: center;
+        }
+        @media (max-width: 576px) {
+            align-items:flex-start;
         }
     }
 

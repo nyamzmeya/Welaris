@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // активировать номер на мобильных
-
   function addRefToTel() {
     if (window.innerWidth <= 768) {
       Array.from(document.querySelectorAll(".telephone")).forEach((tel) => {
@@ -29,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelector(".services_open").onmouseover = function () {
     document.querySelector(".services").style.display = "inline-flex";
+    document.querySelector(".toast_first").classList.remove("toast_visible");
   };
 
   document.querySelector(".services_open").onmouseout = function () {
@@ -49,8 +48,9 @@ document.addEventListener("DOMContentLoaded", () => {
           toast_first.querySelector(".toast_first__img").style["display"] =
             "none";
         }
-        toast_first.querySelector(".toast_first__text").innerText =
-          toast.dataset.text;
+        toast_first.querySelector(
+          ".toast_first__text"
+        ).innerHTML = `<a href="${toast.dataset.href}">${toast.dataset.text}</a>`;
       });
     }
   );
@@ -89,6 +89,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  Array.from(document.querySelectorAll(".programs__slide__img")).forEach(
+    (slide) => {
+      const programs_img_carousel = new Splide(slide, {
+        perPage: 1,
+        pagination: false,
+      }).mount();
+    }
+  );
+
   // карусель с этажами
 
   const info_floors_carousel = new Splide(".info__floors", {
@@ -97,31 +106,12 @@ document.addEventListener("DOMContentLoaded", () => {
     pagination: false,
   }).mount();
   Array.from(
-    document.querySelector(".info__floors__buttons").querySelectorAll(".button")
+    document.querySelector(".floors__buttons").querySelectorAll(".button")
   ).forEach((button) => {
     button.addEventListener("click", function (event) {
       info_floors_carousel.go(parseInt(event.target.dataset.index) - 1);
     });
   });
-
-  // высота для блоков с абсолютныи картинками
-
-  function resizeListenerMethodItem() {
-    if (window.innerWidth <= 1440) {
-      Array.from(document.querySelectorAll(".methods__img")).forEach((item) => {
-        let distance = document.querySelector(".container").offsetLeft;
-        if (item.classList.contains("methods__img_right")) {
-          item.style["transform"] = `translateX(${distance}px)`;
-        } else {
-          item.style["transform"] = `translateX(-${distance}px)`;
-        }
-      });
-    }
-  }
-
-  resizeListenerMethodItem();
-
-  window.addEventListener("resize", resizeListenerMethodItem);
 
   // маска для номера
   let number_input = document.querySelector("#number");
@@ -235,14 +225,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.addEventListener("click", closeAllSelect);
 
-  sessionStorage.setItem("first", true);
+  // модальное окно с акцией
+
+  if (!sessionStorage.getItem("first")) {
+    sessionStorage.setItem("first", true);
+  }
 
   let modal_action = document.querySelector(".modal__action");
 
   if (sessionStorage.getItem("first")) {
     setTimeout(() => {
       modal_action.classList.add("is-visible");
-      sessionStorage.setItem("first", false);
+      // $.fancybox.open({
+      //   src: "#hidden",
+      //   type: "inline",
+      //   modal: true,
+      //   smallBtn: true,
+      // });
+      sessionStorage.setItem("first", "false");
     }, 10000);
   }
 
@@ -256,7 +256,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.onclick = function (event) {
     if (!event.target.classList.contains("modal-wrapper")) {
-      Array.from(document.querySelectorAll(".modal")).forEach((modal) =>modal.classList.remove("is-visible"));
+      Array.from(document.querySelectorAll(".modal")).forEach((modal) =>
+        modal.classList.remove("is-visible")
+      );
     }
   };
 });

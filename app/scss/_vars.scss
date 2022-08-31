@@ -3,6 +3,8 @@ $color-black: #000000;
 $color-white: #FFFFFF;
 $color-dark: #343434;
 $color-gray-light: #DFE0EA;
+$color-violet-light: #7B7E94;
+$color-gray: #FAFAFA;
 
 
 @mixin flex-column-gap($gap) {
@@ -18,7 +20,7 @@ $color-gray-light: #DFE0EA;
 
     @media (max-width: 768px) {
         font-size: 26px;
-        line-height: 33px;
+        line-height: 30px;
     }
 }
 

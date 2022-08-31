@@ -38,6 +38,10 @@
 
     a {
         color: $color-violet;
+        transition: 0.5s ease-in;
+        &:hover {
+            opacity: 0.5;
+        }
     }
 
     &__first {
@@ -160,7 +164,12 @@
 
     @media (max-width: 768px) {
         top: 49px;
-        padding: 20px;
+        padding: 20px 40px;
+
+    }
+
+    @media (max-width: 425px) {
+        width: 100%;
     }
 
     li {

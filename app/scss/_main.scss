@@ -85,10 +85,16 @@
     display: flex;
     min-height: 90px;
     width: 358px;
+
+    a {
+        color: $color-black;
+    }
+
     @media (max-width: 768px) {
         width: 290px;
         font-size: 10px;
     }
+
     &_first {
         @media (max-width: 768px) {
             display: none;
@@ -112,6 +118,7 @@
         position: absolute;
         top: 0px;
         right: 0px;
+
         @media (max-width: 768px) {
             right: -10px;
             top: -10px;
@@ -121,6 +128,7 @@
     &_second {
         font-size: 12px;
         border: 1px solid #FFFFFF;
+
         @media (max-width: 768px) {
             font-size: 10px;
         }
@@ -137,10 +145,11 @@
         align-items: center;
         column-gap: 21px;
         justify-content: center;
+
         @media (max-width: 768px) {
             column-gap: 14px;
         }
-        
+
 
     }
 }
@@ -217,178 +226,18 @@ input::-webkit-calendar-picker-indicator {
 
 
 
-.programs {
-    padding-top: 96px;
-    background: #FAFAFA;
-    padding-bottom: 163px;
-    background-image: url("../images/svg/Union.svg");
-    background-repeat: no-repeat;
-    background-position: top -100px right 100px;
 
-    &__select {
-
-
-        @media (max-width: 768px) {
-            display: block;
-        }
-
-
-
-
-    }
-
-    @media (max-width: 768px) {
-        padding-top: 48px;
-        padding-bottom: 48px;
-    }
-
-    &__heading {
-        @include heading;
-        text-align: center;
-        max-width: 752px;
-        margin: 0px auto 51px auto;
-    }
-
-    &__description {
-        text-align: center;
-        margin: 0px auto 57px auto;
-        font-family: 'GothamPro';
-        max-width: 850px;
-        font-size: 18px;
-        line-height: 33px;
-    }
-
-    &__buttons {
-        margin-bottom: 54px;
-
-        @media (max-width: 1300px) {
-            flex-wrap: wrap;
-            row-gap: 20px;
-            justify-content: center;
-            column-gap: 20px;
-        }
-
-        @media (max-width: 768px) {
-            display: none;
-        }
-
-        button {
-            height: 71px;
-            padding: 0px 8px;
-            font-family: 'GothamPro';
-            width: 192px;
-            font-size: 12px;
-            line-height: 16px;
-        }
-    }
-
-    &__slide {
-        position: relative;
-
-        &__img_first {
-            display: none;
-            margin-top: 20px;
-
-            @media (max-width: 768px) {
-                display: block;
-            }
-        }
-
-        @media (max-width: 1440px) {
-            &__img {
-                position: absolute;
-                right: 0px;
-            }
-        }
-
-        @media (max-width: 1300px) {
-            &__img {
-                max-width: 50%;
-            }
-
-        }
-
-        @media (max-width: 768px) {
-            &__img {
-                display: none;
-            }
-
-
-        }
-
-        &__text {
-            width: 40%;
-            margin-top: 20px;
-
-            @media (max-width: 768px) {
-                width: 100%;
-            }
-
-        }
-
-
-        &__name {
-            font-size: 30px;
-            line-height: 35px;
-
-            span {
-                display: block;
-                font-family: 'Gotham Pro';
-                font-size: 18px;
-                line-height: 35px;
-            }
-        }
-
-        &__items {
-            font-family: 'GothamPro';
-            line-height: 26px;
-            margin-top: 42px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-auto-rows: minmax(57px, auto);
-            margin-bottom: 25px;
-
-            @media (max-width: 768px) {
-                grid-template-columns: 1fr;
-                margin-top: 16px;
-                grid-auto-rows: minmax(31px, auto);
-            }
-
-            span {
-                display: block;
-                padding-left: 27px;
-                position: relative;
-            }
-
-            span::before {
-                content: '\2014';
-                position: absolute;
-                left: 0;
-            }
-        }
-    }
-
-}
 
 
 .info {
-    background: #FAFAFA;
+    background: $color-gray;
     padding-top: 101px;
 
     @media (max-width: 768px) {
         padding-top: 48px;
     }
 
-    &__heading {
-        @include heading-2;
-        text-align: center;
-        margin: 0px auto 51px auto;
-        max-width: 790px;
-
-        @media (max-width: 768px) {
-            margin: 0px auto 25px auto;
-        }
-    }
+   
 
     &__button {
         display: block;
@@ -436,228 +285,15 @@ input::-webkit-calendar-picker-indicator {
         }
     }
 
-    &__floors {
-        &__buttons {
-            margin-bottom: 47px;
-            font-family: 'GothamPro';
-            font-size: 18px;
-            line-height: 33px;
-
-            button {
-                margin-right: 26px;
-                padding: 4px 29px;
-                border-radius: 60px;
-                &:last-child {
-                    margin-right: 0px;
-                }
-            }
-        }
-    }
 
     &__house {}
 
 
 }
 
-.connection {
-    background: linear-gradient(to right, $color-violet 50%, transparent 50%);
-
-
-    @media (max-width: 768px) {
-        background: linear-gradient(to bottom, $color-violet 408px, transparent 408px);
-
-        .flex {
-            flex-direction: column;
-        }
-    }
-
-    &__div {
-        width: 50%;
-
-        @media (max-width: 768px) {
-            width: 100%;
-        }
-
-
-
-
-        &:last-child {
-            font-size: 30px;
-            line-height: 50px;
-
-            @media (max-width: 768px) {
-                font-size: 18px;
-                line-height: 25px;
-                padding-top: 30px;
-                padding-bottom: 30px;
-            }
-
-            span {
-                display: block;
-                max-width: 566px;
-                margin-left: auto;
-                margin-right: auto;
-
-                @media (max-width: 1300px) {
-                    width: 90%;
-                }
-            }
-        }
-
-        form {
-            max-width: 509px;
-            margin: 58px auto 79px auto;
-
-            @media (max-width: 1300px) {
-                max-width: 80%;
-            }
-
-            @media (max-width: 768px) {
-                margin: 59px auto;
-            }
-
-            label {
-                font-family: 'GothamPro';
-                color: $color-white;
-            }
-
-            .form-control {
-                background: #7B7E94;
-                border-radius: 5px;
-                border: none;
-
-                height: 53px;
-            }
-
-        }
-    }
-}
-
-.form-check-label {
-    font-size: 11px;
-    line-height: 16px;
-    margin-left: 10px;
-    margin-bottom: 0px;
-}
-
-.form-group-check {
-    display: flex;
-    align-items: center;
-}
-
-
-.form-check-input {
-    background-color: transparent;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border: 1px solid #FFFFFF;
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
-    margin: 0px;
-
-    &:checked {
-        background: url("data:image/gif;base64,R0lGODlhCwAKAIABAP////3cnSH5BAEKAAEALAAAAAALAAoAAAIUjH+AC73WHIsw0UCjglraO20PNhYAOw==") 3px 3px no-repeat;
-    }
-}
-
-
-
-.form-group {
-    margin-bottom: 21px;
-}
-
-label {
-    display: inline-block;
-    margin-bottom: 0.5rem;
-    margin-left: 1rem;
-}
-
-.form-control {
-    display: block;
-    width: 100%;
-}
-
-.form-footer {
-    margin-top: 35px;
-
-    button {
-        margin-bottom: 19px;
-    }
-}
 
 
 
 
 
-.custom-select {
-    position: relative;
-    background-color: $color-violet;
-    padding: 4px 96px 11px 3px;
-    max-width: 345px;
-}
 
-.custom-select select {
-    display: none;
-}
-
-.select-selected {
-    background-color: $color-violet;
-}
-
-
-.select-selected:after {
-    position: absolute;
-    content: "";
-    top: 14px;
-    right: 10px;
-    width: 0;
-    height: 0;
-    border: 6px solid transparent;
-    border-color: #fff transparent transparent transparent;
-}
-
-
-.select-selected.select-arrow-active:after {
-    border-color: transparent transparent #fff transparent;
-    top: 7px;
-}
-
-
-.select-items div {
-    color: #ffffff;
-    padding: 8px 16px;
-    border: 1px solid transparent;
-    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-    cursor: pointer;
-    user-select: none;
-}
-
-.select-selected {
-    color: #ffffff;
-    padding: 8px 16px;
-    border: 1px solid transparent;
-    cursor: pointer;
-    user-select: none;
-}
-
-
-.select-items {
-    position: absolute;
-    background-color: $color-violet;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 99;
-}
-
-
-.select-hide {
-    display: none;
-}
-
-.select-items div:hover,
-.same-as-selected {
-    background-color: rgba(0, 0, 0, 0.1);
-}
