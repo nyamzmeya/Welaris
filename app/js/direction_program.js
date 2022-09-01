@@ -8,6 +8,8 @@ function addRefToTel() {
   }
 }
 
+console.log("started")
+
 addRefToTel();
 
 window.addEventListener("resize", addRefToTel);

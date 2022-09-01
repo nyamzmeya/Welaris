@@ -10,8 +10,6 @@ addRefToTel();
 
 window.addEventListener("resize", addRefToTel);
 
-
-
 // убирать тоасты при ховере на услуги
 
 document.querySelector(".services__open").onmouseover = function () {
@@ -29,8 +27,6 @@ document.querySelector(".hamburger").addEventListener("click", function () {
   document.querySelector(".hamburger").classList.toggle("hamburger_open");
   document.querySelector(".header__menu").classList.toggle("menu_open");
 });
-
-
 
 // тоаст с номером и местоположением
 let toast_first = document.querySelector(".toast_first");
@@ -254,3 +250,6 @@ window.onclick = function (event) {
     );
   }
 };
+
+
+

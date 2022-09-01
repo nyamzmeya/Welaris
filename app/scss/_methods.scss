@@ -127,7 +127,7 @@
         width: 100%;
 
         @media (max-width: 768px) {
-            margin-bottom: 15px;
+            margin-bottom: 0px;
         }
     }
 
@@ -148,6 +148,10 @@
         opacity: 0;
         transition: 0.3s ease-in;
 
+        @media (max-width: 768px) {
+            display: none !important;
+        }
+
         a {
             color: $color-dark;
             font-size: 18px;
@@ -164,6 +168,10 @@
         margin-left: auto;
         margin-right: auto;
         cursor: pointer;
+        
+        @media (max-width: 768px) {
+            text-align: center;
+        }
 
         span {
             display: block;
@@ -178,8 +186,12 @@
     }
 }
 
+
 .floors {
     padding-bottom: 104px;
+    @media (max-width: 1200px) {
+       padding-bottom: 50px;
+    }
 }
 
 @mixin on-circle($item-count, $circle-size, $item-size) {

@@ -170,9 +170,9 @@ body {
 
 
     &__arrow {
-        a {
+        
             color: $color-dark;
-        }
+       
         img {
             transition: transform 0.5s ease-in-out;
             display: inline-block;
@@ -193,9 +193,10 @@ body {
             margin-left: auto;
             margin-right: auto;
 
-            @media (max-width: 576px) {
-                max-height: 190px;
-            }
+           
+        }
+        @media (max-width: 425px) {
+            max-height: 190px;
         }
     }
 
@@ -815,6 +816,7 @@ body {
         margin-left: auto;
         margin-right: auto;
     }
+   
 }
 
 .floors__buttons {
@@ -1003,6 +1005,12 @@ label {
     background-color: #FAFAFA;
     background-repeat: no-repeat;
     background-position: top -50px right 0px;
+
+    &_program {
+        @media (max-width: 768px) {
+            padding-top: 0px;
+        }
+    }
 
     .toas {
         top: 0px;

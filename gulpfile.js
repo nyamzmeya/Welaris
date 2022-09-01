@@ -4,11 +4,11 @@ const scss = require("gulp-sass")(require("sass"));
 const browserSync = require("browser-sync").create();
 const autoprefixer = require("gulp-autoprefixer");
 const imagemin = require("gulp-imagemin");
-const del = require("del");
+const plumber = require("gulp-plumber");
 const cssImport = require("gulp-cssimport");
 const mincss = require("gulp-clean-css");
 const rename = require("gulp-rename");
-const uglify = require('gulp-uglify');
+const uglify = require("gulp-uglify");
 const imageminGiflossy = require("imagemin-giflossy");
 const imageminPngquant = require("imagemin-pngquant");
 const imageminZopfli = require("imagemin-zopfli");
@@ -20,10 +20,6 @@ function browsersync() {
       baseDir: "app/",
     },
   });
-}
-
-function cleanDist() {
-  del("dist");
 }
 
 function images() {
@@ -100,15 +96,22 @@ function styles() {
 }
 
 function scripts() {
-  return src(["app/js/main.js", "app/js/methods.js", "app/js/direction.js", "app/js/direction_program.js"])
+  return src([
+    "app/js/main.js",
+    "app/js/methods.js",
+    "app/js/direction.js",
+    "app/js/direction_program.js",
+  ])
+    .pipe(plumber())
     .pipe(uglify())
     .pipe(rename({ suffix: ".min" }))
     .pipe(dest("app/js"))
+    .pipe(browserSync.stream())
 }
 
 function watching() {
   watch(["app/scss/**/*.scss"], styles);
-  watch(["app/js/**/*.js"]).on("change", scripts);
+  watch(["app/js/**/*.js", '!app/js/**/*.min.js']).on("change", scripts);
   watch(["app/*.html"]).on("change", browserSync.reload);
   watch(["app/img"]).on("change", images);
 }
@@ -119,6 +122,5 @@ exports.browsersync = browsersync;
 exports.script = scripts;
 
 exports.images = images;
-exports.cleanDist = cleanDist;
 
 exports.default = parallel(browsersync, watching, styles, scripts, images);
