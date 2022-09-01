@@ -101,6 +101,7 @@ function scripts() {
     "app/js/methods.js",
     "app/js/direction.js",
     "app/js/direction_program.js",
+    "app/js/about.js"
   ])
     .pipe(plumber())
     .pipe(uglify())

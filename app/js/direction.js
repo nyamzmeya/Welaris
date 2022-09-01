@@ -13,6 +13,12 @@ addRefToTel();
 window.addEventListener("resize", addRefToTel);
 
 
+// убирать тоасты при ховере на услуги
+
+document.querySelector(".services__open").onmouseover = function () {
+  document.querySelector(".toast_page").classList.remove("toast_visible");
+};
+
 // гамбургер меню
 document.querySelector(".hamburger").addEventListener("click", function () {
   document
@@ -25,15 +31,27 @@ document.querySelector(".hamburger").addEventListener("click", function () {
   document.querySelector(".header__menu").classList.toggle("menu_open");
 });
 
-// выпадающие услуги
+// тоаст с номером и местоположением
+let toast_page = document.querySelector(".toast_page");
 
-document.querySelector(".services_open").onmouseover = function () {
-  document.querySelector(".services").style.display = "inline-flex";
-};
-
-document.querySelector(".services_open").onmouseout = function () {
-  document.querySelector(".services").style.display = "none";
-};
+Array.from(document.querySelectorAll(".toast_first_open")).forEach((toast) => {
+  toast.addEventListener("click", function () {
+    toast_page.classList.add("toast_visible");
+    if (toast.dataset.img == "true") {
+      toast_page.querySelector(".toast_first__img").style["display"] = "block";
+    } else {
+      toast_page.querySelector(".toast_first__img").style["display"] = "none";
+    }
+    toast_page.querySelector(
+      ".toast_first__text"
+    ).innerHTML = `<a href="${toast.dataset.href}">${toast.dataset.text}</a>`;
+  });
+});
+document
+  .querySelector(".toast_first__close")
+  .addEventListener("click", function () {
+    toast_page.classList.remove("toast_visible");
+  });
 
 // маска для номера
 let number_input = document.querySelector("#number");

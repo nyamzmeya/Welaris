@@ -31,8 +31,8 @@ body {
 
     @media (max-width: 1440px) {
         width: 100%;
-        padding-right: 98px;
-        padding-left: 98px;
+        padding-right: 95px;
+        padding-left: 95px;
         max-width: 100%;
     }
 
@@ -106,12 +106,18 @@ body {
         background-image: url("../images/svg/Union3.svg");
         background-repeat: no-repeat;
         background-position: top 600px left 0px;
+
     }
 
     &_union_left {
         background-image: url("../images/svg/Union_left.svg");
         background-repeat: no-repeat;
-        background-position: bottom 54px left -20px;
+        background-position: bottom 10% left 0px;
+        background-size: 20%;
+        @media (max-width: 1024px) {
+            background-image:none;
+        }
+
     }
 
     &__button {
@@ -170,9 +176,9 @@ body {
 
 
     &__arrow {
-        
-            color: $color-dark;
-       
+
+        color: $color-dark;
+
         img {
             transition: transform 0.5s ease-in-out;
             display: inline-block;
@@ -193,8 +199,9 @@ body {
             margin-left: auto;
             margin-right: auto;
 
-           
+
         }
+
         @media (max-width: 425px) {
             max-height: 190px;
         }
@@ -315,6 +322,8 @@ body {
         }
 
         &_left {
+            
+            
             .container {
                 padding-left: 0px;
 
@@ -325,6 +334,7 @@ body {
         }
 
         &_right {
+            background-image: url("../images/svg/union_left_top.svg");
             .container {
                 padding-right: 0px;
 
@@ -517,6 +527,9 @@ body {
     background-image: url("../images/svg/Union.svg");
     background-repeat: no-repeat;
     background-position: top -100px right 100px;
+    @media (max-width: 1024px) {
+        background-image: none;
+    }
 
     &_white {
         background: $color-white;
@@ -816,7 +829,7 @@ body {
         margin-left: auto;
         margin-right: auto;
     }
-   
+
 }
 
 .floors__buttons {
@@ -1004,7 +1017,12 @@ label {
     background-image: url("../images/svg/Union2.svg");
     background-color: #FAFAFA;
     background-repeat: no-repeat;
-    background-position: top -50px right 0px;
+    background-position: top 0px right 0px;
+
+    @media (max-width: 768px) {
+        background-size: 150%;
+    }
+
 
     &_program {
         @media (max-width: 768px) {
@@ -1057,8 +1075,22 @@ label {
 
     }
 
+    &_page {
+        @media (max-width: 768px) {
+            display: none;
+        }
+
+        opacity: 0;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        box-shadow: 0px 10px 15px rgb(0 0 0 / 15%);
+        border: $color-violet;
+    }
+
     &_visible {
         opacity: 1;
+        z-index: 10;
     }
 
 
@@ -1124,9 +1156,9 @@ ul.breadcrumb li+li:before {
 
 ul.breadcrumb li {
     &:last-child {
-       
-            color: $color-dark;
-        
+
+        color: $color-dark;
+
     }
 }
 

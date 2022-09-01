@@ -56,14 +56,18 @@
             background-image: cover;
             background-repeat: none;
             background-position: center;
+            cursor: pointer;
 
 
             @media (max-width: 768px) {
-                width: 344px;
+                max-width: 344px;
                 height: 272px;
                 padding-left: 14px;
                 padding-bottom: 22px;
                 row-gap: 20px;
+                @media (max-width: 374px) {
+                    max-width: 100%;
+                }
             }
 
             &:hover {
@@ -531,3 +535,5 @@
         padding-bottom: 16px;
     }
 }
+
+
