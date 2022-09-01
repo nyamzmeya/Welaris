@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+
   // активировать номер на мобильных
 
   function addRefToTel() {
@@ -25,15 +25,27 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".header__menu").classList.toggle("menu_open");
   });
 
-  // выпадающие услуги
+  // тоаст с номером и местоположением
+let toast_first = document.querySelector(".toast_first");
 
-  document.querySelector(".services_open").onmouseover = function () {
-    document.querySelector(".services").style.display = "inline-flex";
-  };
-
-  document.querySelector(".services_open").onmouseout = function () {
-    document.querySelector(".services").style.display = "none";
-  };
+Array.from(document.querySelectorAll(".toast_first_open")).forEach((toast) => {
+  toast.addEventListener("click", function () {
+    toast_first.classList.add("toast_visible");
+    if (toast.dataset.img == "true") {
+      toast_first.querySelector(".toast_first__img").style["display"] = "block";
+    } else {
+      toast_first.querySelector(".toast_first__img").style["display"] = "none";
+    }
+    toast_first.querySelector(
+      ".toast_first__text"
+    ).innerHTML = `<a href="${toast.dataset.href}">${toast.dataset.text}</a>`;
+  });
+});
+document
+  .querySelector(".toast_first__close")
+  .addEventListener("click", function () {
+    toast_first.classList.remove("toast_visible");
+  });
 
   // карусель с программами
 
@@ -41,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     perPage: 1,
     arrows: false,
     pagination: false,
+    rewindByDrag: false
   }).mount();
   Array.from(
     document.querySelector(".programs__buttons").querySelectorAll(".button")
@@ -129,10 +142,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (event.type == "blur" && this.value.length < 5) this.value = "";
   }
 
-  // number_input.addEventListener("input", mask, false);
-  // number_input.addEventListener("focus", mask, false);
-  // number_input.addEventListener("blur", mask, false);
-  // number_input.addEventListener("keydown", mask, false);
+  number_input.addEventListener("input", mask, false);
+  number_input.addEventListener("focus", mask, false);
+  number_input.addEventListener("blur", mask, false);
+  number_input.addEventListener("keydown", mask, false);
 
   // кастомный select
   let x, i, j, selElmnt, a, b, c;
@@ -206,33 +219,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.addEventListener("click", closeAllSelect);
 
+ 
+
   // модальное окно с акцией
-  if (!sessionStorage.getItem("first")) {
-    sessionStorage.setItem("first", true);
-  }
 
-  let modal_action = document.querySelector(".modal__action");
+if (!sessionStorage.getItem("first")) {
+  sessionStorage.setItem("first", "true");
+}
 
-  if (sessionStorage.getItem("first")) {
-    setTimeout(() => {
-      modal_action.classList.add("is-visible");
-      sessionStorage.setItem("first", "false");
-    }, 10000);
-  }
+if (sessionStorage.getItem("first") == "true") {
+  setTimeout(() => {
+    $.fancybox.open({
+      src: "#modal__action",
+      type : 'inline',
+    });
+    sessionStorage.setItem("first", "false");
+  }, 10000);
+}
+  
 
-  let modal__close = document.querySelectorAll(".modal-close");
 
-  Array.from(modal__close).forEach((close) => {
-    close.onclick = function () {
-      close.closest(".modal").classList.remove("is-visible");
-    };
-  });
 
-  window.onclick = function (event) {
-    if (!event.target.classList.contains("modal-wrapper")) {
-      Array.from(document.querySelectorAll(".modal")).forEach((modal) =>
-        modal.classList.remove("is-visible")
-      );
-    }
-  };
-});

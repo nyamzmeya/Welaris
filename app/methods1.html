@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welaris</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
@@ -21,8 +22,8 @@
             </div>
           </button>
           <div class="header__logo">
-            <img src="images/svg/logotype.svg" alt="Welaris" class="img1" />
-            <img src="images/svg/logosm.svg" alt="Welaris" class="img2" />
+            <a href="index.html"><img src="images/svg/logotype.svg" alt="Welaris" class="img1" />
+              <img src="images/svg/logosm.svg" alt="Welaris" class="img2" /></a>
           </div>
         </div>
         <ul class="header__links">
@@ -90,7 +91,10 @@
       <section class="description">
         <div class="container">
           <div class="page__name">
-            <span>Главная страница /</span> Методы лечения
+            <ul class="breadcrumb">
+              <li><a href="index.html">Главная страница</a></li>
+              <li>Методы лечения</li>
+            </ul>
           </div>
           <div class="page__subname">
             Методы лечения центра превентивной и эстетической медицины Welaris
@@ -296,10 +300,7 @@
             </div>
           </div>
         </div>
-        <div class="block__item block__item_gray block_union">
-          <div class="block__heading_first">
-            Мы используем природные факторы и природно-климатические ресурсы
-          </div>
+        <div class="block__item block__item_gray block_union block__item_6">
           <div class="container">
             <img
               loading="lazy"
@@ -334,7 +335,7 @@
       </section>
       <section class="programs programs_white">
         <div class="container">
-          <div class="programs__heading">
+          <div class="programs__heading programs__heading_2">
             Разработаны и внедрены индивидуальные программы здоровья для всей семьи
           </div>
           <div class="programs__description">
@@ -895,7 +896,7 @@
             <div class="footer__links_first">
               <div>
                 <a href="#">Методы лечения</a>
-                <a href="#">Направления лечения</a>
+                <a href="directions.html">Направления лечения</a>
                 <a href="#">Программы лечения</a>
                 <a href="#">Косметология и SPA</a>
                 <a href="#">CheckUp-диагностика</a>
@@ -911,7 +912,7 @@
             </div>
             <div class="footer__links">
               <a href="#">Методы лечения</a>
-              <a href="#">Направления лечения</a>
+              <a href="directions.html">Направления лечения</a>
               <a href="#">Программы лечения</a>
               <a href="#">Косметология и SPA</a>
               <a href="#">CheckUp-диагностика</a>
@@ -941,25 +942,23 @@
       </footer>
     </div>
 
-    <div class="modal modal__action">
-      <div class="modal-overlay modal-toggle"></div>
-      <div class="modal-wrapper modal-transition">
-        <div class="modal-body">
-          <img src="images/png/action.png" alt="Акция" />
-          <div class="modal-content">
-            <div class="modal__heading">Лазерная эпиляция со скидкой</div>
-            <div class="modal__info">
-              Персонализированный подход к оздоровлению, с использованием
-              уникальных современных технологий диагностики и оздоровления
-            </div>
-            <button class="button">Подробнее</button>
+    <div class="modal__action" id="modal__action">
+      <div class="modal-body">
+        <img loading="lazy" src="images/png/action.png" alt="Акция" />
+        <div class="modal-content">
+          <div class="modal__heading">Лазерная эпиляция со скидкой</div>
+          <div class="modal__info">
+            Персонализированный подход к оздоровлению, с использованием
+            уникальных современных технологий диагностики и оздоровления
           </div>
+          <button class="button">Подробнее</button>
         </div>
-        <span class="modal-close"
-          ><img src="images/svg/close.svg" alt="Close"
-        /></span>
       </div>
-    </div>
+    
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="js/methods.min.js"></script>
   </body>

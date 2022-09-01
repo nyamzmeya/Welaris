@@ -1,11 +1,20 @@
 .main {
     padding-top: 150px;
-    background-image: url("../images/png/main_bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     color: $color-white;
-    padding-bottom: 234px;
+    padding-bottom: 208px;
+    position: relative;
+    background-image: url("../images/png/main_bg.png");
+
+    &_video {
+        background-image: none;
+        @media (max-width: 768px) {
+            background-image: url("../images/png/main_bg.png");
+        }
+    }
+
 
     @media (max-width: 768px) {
         padding-top: 51px;
@@ -22,16 +31,19 @@
 
     &__toasts {
         position: absolute;
-        top: 0px;
-        right: 0px;
+        top: -15px;
+        right: 98px;
         display: flex;
         flex-direction: column;
         row-gap: 9px;
 
         @media (max-width: 1024px) {
             left: 15px;
-            top: -137px;
+            top: -144px;
             right: auto;
+
+
+
 
             .toast:not(:first-child) {
                 display: none;
@@ -47,6 +59,11 @@
         @media (max-width: 1024px) {
             max-width: 100%;
         }
+
+        @media (max-width:768px) {
+            line-height: 32px;
+            margin-bottom: 26px;
+        }
     }
 
     &__button {
@@ -54,6 +71,8 @@
         background-color: transparent;
         padding: 14px 33px;
         transition: 0.5s ease-in;
+
+        align-self: flex-start;
 
         &:hover {
             background-color: $color-violet;
@@ -69,6 +88,7 @@
         display: flex;
         flex-direction: column;
         row-gap: 13px;
+        transform: translateY(-13px);
 
         @media (max-width: 768px) {
             display: none;
@@ -76,83 +96,7 @@
     }
 }
 
-.toast {
-    background: rgba(255, 255, 255, 0.53);
-    padding: 15px;
-    color: $color-black;
-    font-family: 'GothamPro';
-    transition: 0.5s ease-in-out;
-    display: flex;
-    min-height: 90px;
-    width: 358px;
 
-    a {
-        color: $color-black;
-    }
-
-    @media (max-width: 768px) {
-        width: 290px;
-        font-size: 10px;
-    }
-
-    &_first {
-        @media (max-width: 768px) {
-            display: none;
-        }
-
-        opacity: 0;
-        position: absolute;
-        top: -150px;
-        right: 0px;
-        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.15);
-
-    }
-
-    &_visible {
-        opacity: 1;
-    }
-
-
-    &__close {
-        cursor: pointer;
-        position: absolute;
-        top: 0px;
-        right: 0px;
-
-        @media (max-width: 768px) {
-            right: -10px;
-            top: -10px;
-        }
-    }
-
-    &_second {
-        font-size: 12px;
-        border: 1px solid #FFFFFF;
-
-        @media (max-width: 768px) {
-            font-size: 10px;
-        }
-
-        span {
-            max-width: 224px;
-        }
-    }
-
-    &__content {
-        position: relative;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        column-gap: 21px;
-        justify-content: center;
-
-        @media (max-width: 768px) {
-            column-gap: 14px;
-        }
-
-
-    }
-}
 
 .order {
     padding-top: 65px;
@@ -160,6 +104,7 @@
 
     @media (max-width: 768px) {
         padding-top: 37px;
+        padding-bottom: 43px;
     }
 
     &__widgets {
@@ -176,12 +121,21 @@
     &__calendar {
         color: $color-dark;
         font-family: 'GothamPro';
-        width: 30%;
+        width: 403px;
         display: flex;
         height: 71px;
-        justify-content: space-around;
+        padding-right: 19px;
+        padding-left: 17px;
         align-items: center;
         border: 1px solid $color-violet;
+        position: relative;
+
+        &__first {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            column-gap: 16px;
+        }
 
         @media (max-width: 768px) {
             max-width: 403px;
@@ -191,6 +145,8 @@
 
         img {
             display: inline-block;
+            position: absolute;
+            right: 29px;
 
         }
 
@@ -201,7 +157,7 @@
     }
 
     &__button {
-        width: 30%;
+        width: 401px;
         height: 71px;
 
         @media (max-width: 768px) {
@@ -237,63 +193,20 @@ input::-webkit-calendar-picker-indicator {
         padding-top: 48px;
     }
 
-   
-
-    &__button {
-        display: block;
-        margin: 0px auto 104px auto;
-
-        @media (max-width: 768px) {
-            margin-bottom: 51px;
-        }
-    }
-
-    &__flex {
-        text-align: center;
-        font-family: 'GothamPro';
-        font-size: 14px;
-        line-height: 22px;
-        align-items: flex-start;
-        margin-bottom: 59px;
-
-        @media (max-width: 768px) {
-            flex-direction: column;
-            row-gap: 14px;
-            margin-bottom: 20px;
-
-        }
-
-        &__heading {
-            font-size: 20px;
-            line-height: 22px;
-            margin-bottom: 12px;
-        }
-
-        &__item {
-            width: 22%;
-
-            @media (max-width: 768px) {
-
-                width: 100%;
-
-            }
-
-
-            span {
-                display: block;
-            }
-        }
-    }
-
-
-    &__house {}
-
-
 }
 
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
 
-
-
-
-
-
+    @media (max-width: 768px) {
+        display: none;
+    }
+}

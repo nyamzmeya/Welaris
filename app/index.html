@@ -22,15 +22,33 @@
             </div>
           </button>
           <div class="header__logo">
-            <img loading="lazy" src="images/svg/logotype.svg" alt="Welaris" class="img1" />
-            <img loading="lazy" src="images/svg/logosm.svg" alt="Welaris" class="img2" />
+           <a href="#">  <img loading="lazy" src="images/svg/logotype.svg" alt="Welaris" class="img1" />
+            <img loading="lazy" src="images/svg/logosm.svg" alt="Welaris" class="img2" /></a>
           </div>
         </div>
         <ul class="header__links">
           <li><a href="#">Бронирования</a></li>
           <li><a href="#">Программы</a></li>
           <li><a href="#">Врачи</a></li>
-          <li><a class="services_open" href="#">Услуги</a></li>
+          <li class="services__open">
+            <a href="#">Услуги</a>
+            <div class="services">
+              <ul class="services__links">
+                <li><a href="#">Антистресс </a></li>
+                <li><a href="#">Гастроэнтерология</a></li>
+                <li><a href="#">Детокс</a></li>
+                <li><a href="#">Диагностическая программа ChekUp</a></li>
+                <li><a href="#">А Женское здоровье</a></li>
+                <li><a href="#">А Здоровые легкие</a></li>
+                <li><a href="#">Мужское здоровье</a></li>
+                <li><a href="#">Оздоровление</a></li>
+                <li><a href="#">Повышение иммунитета</a></li>
+                <li><a href="#">Поздняя кардиологическая реабилитация</a></li>
+                <li><a href="#">Сахарный диабет</a></li>
+                <li><a href="#">Свободное движение</a></li>
+              </ul>
+            </div>
+          </li>
           <li><a href="#">Акции</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
@@ -52,7 +70,7 @@
         </div>
         <div class="header__menu">
           <ul class="header__menu__links">
-            <li><a href="#">Услуги</a></li>
+            <li><a class="services__open" href="#">Услуги</a></li>
             <li><a href="#">Стоимость</a></li>
             <li><a href="#">Программы лечения</a></li>
             <li><a href="methods.html">Методы лечения</a></li>
@@ -67,22 +85,7 @@
           </ul>
         </div>
 
-        <div class="services">
-          <ul class="services__links">
-            <li><a href="#">Антистресс </a></li>
-            <li><a href="#">Гастроэнтерология</a></li>
-            <li><a href="#">Детокс</a></li>
-            <li><a href="#">Диагностическая программа ChekUp</a></li>
-            <li><a href="#">А Женское здоровье</a></li>
-            <li><a href="#">А Здоровые легкие</a></li>
-            <li><a href="#">Мужское здоровье</a></li>
-            <li><a href="#">Оздоровление</a></li>
-            <li><a href="#">Повышение иммунитета</a></li>
-            <li><a href="#">Поздняя кардиологическая реабилитация</a></li>
-            <li><a href="#">Сахарный диабет</a></li>
-            <li><a href="#">Свободное движение</a></li>
-          </ul>
-        </div>
+       
       </div>
     </header>
     <div class="header__overlay"></div>
@@ -152,16 +155,16 @@
         <div class="container">
           <div class="order__widgets">
             <div class="order__calendar">
-              <span>Заезд</span>
-              <div class="verticle-line"></div>
+              <div class="order__calendar__first"><span>Заезд</span>
+                <div class="verticle-line"></div></div>
               <input type="date" id="start-date" name="trip-start" />
 
               <img loading="lazy" src="images/svg/calendar.svg" alt="Календарь" />
             </div>
 
             <div class="order__calendar">
-              <span>Выезд</span>
-              <div class="verticle-line"></div>
+              <div class="order__calendar__first"><span>Выезд</span>
+                <div class="verticle-line"></div></div>
               <input type="date" id="end-date" name="trip-end" />
 
               <img loading="lazy" src="images/svg/calendar.svg" alt="Календарь" />
@@ -176,7 +179,7 @@
 
       <section class="methods">
        
-        <div class="block__item block__item_gray">
+        <div class="block__item block__item_gray block__item_1 block__item_right block_union_left">
        <div class="container">
         <div class="block__content">
           <div class="block__heading">Инновационные методы лечения</div>
@@ -192,7 +195,7 @@
           </div>
           <div class="block__link">
             Методы лечения
-            <a href="#" class="block__arrow"
+            <a href="methods.html" class="block__arrow"
               ><img loading="lazy" src="images/svg/Arrow1.svg" alt="Перейти"
             /></a>
           </div>
@@ -205,11 +208,11 @@
         /></div>
         
       </div>
-      <div class="block__item">
+      <div class="block__item block__item_2 block__item_left">
        <div class="container">
         
         <img loading="lazy"
-        class="block__img block__img_left"
+        class="block__img block__img_left "
         src="images/png/method2.png"
         alt="Спина"
       />
@@ -650,7 +653,7 @@
 
       <section class="check">
       
-        <div class="block__item">
+        <div class="block__item block__item_3 block__item_left">
          <div class="container">
           
           <img loading="lazy"
@@ -688,9 +691,9 @@
           <div class="block__heading_first">
             Мы решаем задачи вашего здоровья с комфортом для вас
           </div>
-          <div class="info__flex flex">
-            <div class="info__flex__item">
-              <span class="info__flex__heading">Первичная консультация</span>
+          <div class="block__flex flex">
+            <div class="block__flex__item">
+              <span class="block__flex__heading">Первичная консультация</span>
               <span
                 >Оценка состояния здоровья , составление рекомендаций по
                 лабораторной и аппаратной диагностике, выдача предварительных
@@ -698,16 +701,16 @@
               >
             </div>
 
-            <div class="info__flex__item">
-              <span class="info__flex__heading">Сдача анализов</span>
+            <div class="block__flex__item">
+              <span class="block__flex__heading">Сдача анализов</span>
               <span
                 >Сдача анализов в медицинском центре, точный анализ резулятатов
                 и предоставление сведений в удомном для вас виде.</span
               >
             </div>
 
-            <div class="info__flex__item">
-              <span class="info__flex__heading"
+            <div class="block__flex__item">
+              <span class="block__flex__heading"
                 >Консультация с лечащим врачем</span
               >
               <span
@@ -716,18 +719,18 @@
               >
             </div>
 
-            <div class="info__flex__item">
-              <span class="info__flex__heading">Прохождение терапии</span>
+            <div class="block__flex__item">
+              <span class="block__flex__heading">Прохождение терапии</span>
               <span
                 >Соблюдение рекомендаций по индивидуальному курсу оздоровления,
                 прохождение подобранной программы лечения</span
               >
             </div>
           </div>
-          <button class="button  info__button">
+          <button class="button  block__button">
             Записаться на прием
           </button>
-          <div class="block__heading_first">
+          <div class="block__heading_first block__heading_first_big">
             Современные комфортные и полностью оборудованные кабинеты
           </div>
           <div class="floors__buttons">
@@ -747,7 +750,7 @@
             </div>
           </div>
         </div>
-        <div class="block__item">
+        <div class="block__item block__item_4 block__item_right">
           <div class="block__heading_first">
             Проживание в премиальном отеле сочи с собственным пляжем
           </div>
@@ -827,11 +830,11 @@
                 <img loading="lazy" src="images/svg/logotype-violet.svg" alt="Welaris" />
               </div>
               <div class="footer__pins">
-                <div>
+                <div class="footer__pin">
                   <img loading="lazy" src="images/svg/map-violet.svg" alt="Пин" />пгт Сириус,
                   ул.65 лет Победы 50
                 </div>
-                <div>
+                <div class="footer__pin">
                   <img loading="lazy" src="images/svg/phone-violet.svg" alt="Phone" />
                   <a href="tel:+77956784567" class="telephone">+7 862 243 33 33</a>
                 </div>
@@ -846,7 +849,7 @@
             <div class="footer__links_first">
               <div>
                 <a href="methods.html">Методы лечения</a>
-                <a href="#">Направления лечения</a>
+                <a href="directions.html">Направления лечения</a>
                 <a href="#">Программы лечения</a>
                 <a href="#">Косметология и SPA</a>
                 <a href="#">CheckUp-диагностика</a>
@@ -862,7 +865,7 @@
             </div>
             <div class="footer__links">
               <a href="methods.html">Методы лечения</a>
-              <a href="#">Направления лечения</a>
+              <a href="directions.html">Направления лечения</a>
               <a href="#">Программы лечения</a>
               <a href="#">Косметология и SPA</a>
               <a href="#">CheckUp-диагностика</a>
@@ -892,9 +895,8 @@
       </footer>
     </div>
 
-    <div class="modal modal__action">
-      <div class="modal-overlay modal-toggle"></div>
-      <div class="modal-wrapper modal-transition" style="display: none; width: 500px;" id="hidden">
+    
+      <div class="modal__action" id="modal__action">
         <div class="modal-body">
           <img loading="lazy" src="images/png/action.png" alt="Акция" />
           <div class="modal-content">
@@ -906,10 +908,7 @@
             <button class="button">Подробнее</button>
           </div>
         </div>
-        <span class="modal-close"
-          ><img loading="lazy" src="images/svg/close.svg" alt="Close"
-        /></span>
-      </div>
+      
     </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
 

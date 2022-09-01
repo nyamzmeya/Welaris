@@ -39,6 +39,7 @@
     a {
         color: $color-violet;
         transition: 0.5s ease-in;
+
         &:hover {
             opacity: 0.5;
         }
@@ -61,7 +62,7 @@
     }
 
     &__info {
-        @include flex-column-gap(26px);
+        @include flex-column-gap(18px);
 
         @media (max-width: 768px) {
             img {
@@ -201,18 +202,19 @@
 
 
 .services {
-    padding: 15px 10px 28px 28px;
-    max-width: 286px;
-    ;
-    background: rgba(255, 255, 255, 0.8);
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.15);
+    padding-top: 35px;
+    width: 286px;
     display: none;
     flex-direction: column;
-    transition: 0.5s ease-in-out;
     font-family: "GothamPro";
-    top: 68px;
-    right: 220px;
     position: absolute;
+    left: -54px;
+
+    &__links {
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.15);
+        padding: 15px 10px 28px 28px !important;
+    }
 
     li {
         line-height: 40px;
@@ -235,4 +237,13 @@
     .img2 {
         display: block;
     }
+}
+
+.services__open {
+    position: relative;
+}
+
+.services__open:hover .services {
+    display: block;
+
 }

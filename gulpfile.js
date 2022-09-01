@@ -100,7 +100,7 @@ function styles() {
 }
 
 function scripts() {
-  return src(["app/js/main.js", "app/js/methods.js"])
+  return src(["app/js/main.js", "app/js/methods.js", "app/js/direction.js", "app/js/direction_program.js"])
     .pipe(uglify())
     .pipe(rename({ suffix: ".min" }))
     .pipe(dest("app/js"))

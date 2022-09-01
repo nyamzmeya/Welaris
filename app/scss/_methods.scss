@@ -1,20 +1,8 @@
-.description {
-    padding-top: 27px;
-    padding-bottom: 68px;
-    background-image: url("../images/svg/Union2.svg");
-    background-color: #FAFAFA;
-    background-repeat: no-repeat;
-    background-position: top -50px right 0px;
-
-    @media (max-width: 768px) {
-        padding-bottom: 48px;
-    }
-}
 
 .five {
     padding-top: 97px;
     padding-bottom: 96px;
-
+    overflow-x: hidden;
 
     @media (max-width: 768px) {
         padding-top: 43px;
@@ -25,6 +13,11 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        width: 110%;
+
+        @media (max-width: 1400px) {
+            width: 100%;
+        }
 
         &__circle {
             display: flex;
@@ -170,6 +163,7 @@
         width: fit-content;
         margin-left: auto;
         margin-right: auto;
+        cursor: pointer;
 
         span {
             display: block;

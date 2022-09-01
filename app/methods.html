@@ -22,15 +22,33 @@
             </div>
           </button>
           <div class="header__logo">
-            <img src="images/svg/logotype.svg" alt="Welaris" class="img1" />
-            <img src="images/svg/logosm.svg" alt="Welaris" class="img2" />
+           <a href="index.html"> <img src="images/svg/logotype.svg" alt="Welaris" class="img1" />
+            <img src="images/svg/logosm.svg" alt="Welaris" class="img2" /></a>
           </div>
         </div>
         <ul class="header__links">
           <li><a href="#">Бронирования</a></li>
           <li><a href="#">Программы</a></li>
           <li><a href="#">Врачи</a></li>
-          <li><a class="services_open" href="#">Услуги</a></li>
+          <li class="services__open">
+            <a href="#">Услуги</a>
+            <div class="services">
+              <ul class="services__links">
+                <li><a href="#">Антистресс </a></li>
+                <li><a href="#">Гастроэнтерология</a></li>
+                <li><a href="#">Детокс</a></li>
+                <li><a href="#">Диагностическая программа ChekUp</a></li>
+                <li><a href="#">А Женское здоровье</a></li>
+                <li><a href="#">А Здоровые легкие</a></li>
+                <li><a href="#">Мужское здоровье</a></li>
+                <li><a href="#">Оздоровление</a></li>
+                <li><a href="#">Повышение иммунитета</a></li>
+                <li><a href="#">Поздняя кардиологическая реабилитация</a></li>
+                <li><a href="#">Сахарный диабет</a></li>
+                <li><a href="#">Свободное движение</a></li>
+              </ul>
+            </div>
+          </li>
           <li><a href="#">Акции</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
@@ -67,22 +85,6 @@
           </ul>
         </div>
 
-        <div class="services">
-          <ul class="services__links">
-            <li><a href="#">Антистресс </a></li>
-            <li><a href="#">Гастроэнтерология</a></li>
-            <li><a href="#">Детокс</a></li>
-            <li><a href="#">Диагностическая программа ChekUp</a></li>
-            <li><a href="#">А Женское здоровье</a></li>
-            <li><a href="#">А Здоровые легкие</a></li>
-            <li><a href="#">Мужское здоровье</a></li>
-            <li><a href="#">Оздоровление</a></li>
-            <li><a href="#">Повышение иммунитета</a></li>
-            <li><a href="#">Поздняя кардиологическая реабилитация</a></li>
-            <li><a href="#">Сахарный диабет</a></li>
-            <li><a href="#">Свободное движение</a></li>
-          </ul>
-        </div>
       </div>
     </header>
     <div class="header__overlay"></div>
@@ -90,20 +92,39 @@
     <div class="wrapper">
       <section class="description">
         <div class="container">
+          <div class="toast toast_first">
+            <div class="toast__content">
+              <img loading="lazy"
+                class="toast_first__img"
+                src="images/svg/pin.svg"
+                alt="Место"
+              />
+              <span class="toast_first__text"></span>
+              <span class="toast_first__close toast__close"
+                ><img loading="lazy" src="images/svg/close.svg" alt="Закрыть"
+              /></span>
+            </div>
+          </div>
           <div class="page__name">
-            <span>Главная страница /</span> Методы лечения
+            <ul class="breadcrumb">
+              <li><a href="index.html">Главная страница</a></li>
+              <li>Методы лечения</li>
+            </ul>
           </div>
           <div class="page__subname">
             Методы лечения центра превентивной и эстетической медицины Welaris
           </div>
           <div class="page__text">
             Современные условия жизни диктуют необходимость создания
-            принципиально нового подхода к здоровью. <br /><br /><br />
+            принципиально нового подхода к здоровью. <br /><br />
             Мы разработали персонализированный подход к оздоровлению, с
             использованием уникальных современных технологий диагностики и
             оздоровления и превентивной медицины
+
+           
           </div>
-        </div>
+          </div>
+        
       </section>
 
       <section class="five">
@@ -136,21 +157,22 @@
         </div>
       </section>
       <section>
-        <div class="block__item block__item_gray block_union">
-          <div class="block__heading_first">
+        <div class="block__item block__item_gray block_union block__item_right block__item_1">
+          <div class="block__heading_first block__heading_first_big">
             Мы используем природные факторы и природно-климатические ресурсы
           </div>
          <div class="container"> 
        
-          <img
+         
+         
+          <div class="block__content">
+            <div class="block__heading">Климат г. Сочи</div>
+            <img
             loading="lazy"
             class="block__img_first"
             src="images/png/mountain.png"
             alt="Горы"
           />
-         
-          <div class="block__content">
-            <div class="block__heading">Климат г. Сочи</div>
             <div class="block__text">
               Богатая и разнообразная растительность субтропиков выделяет в
               воздух большое количество фитонцидов и ароматических летучих
@@ -170,15 +192,15 @@
             alt="Горы"
           /> </div>      
         </div>
-        <div class="block__item">
+        <div class="block__item block__item_left block__item_6">
           <div class="container">
+            
             <img
-              loading="lazy"
-              class="block__img block__img_left"
-              src="images/png/mineral_water.png"
-              alt="Спина"
-            />
-
+                loading="lazy"
+                class="block__img block__img_left"
+                src="images/png/mineral_water.png"
+                alt="Спина"
+              />
             <div class="block__content">
               <div class="block__heading">Минеральные воды</div>
               <img
@@ -203,7 +225,7 @@
             </div>
           </div>
         </div>
-        <div class="block__item block__item_gray">
+        <div class="block__item block__item_gray block__item_right block__item_7">
           <div class="container">
             
         
@@ -239,16 +261,17 @@
             />
           </div>
         </div>
-        <div class="block__item">
+        <div class="block__item block__item_left">
           <div class="container">
+           
             <img
-              loading="lazy"
-              class="block__img block__img_left"
-              src="images/png/flower.png"
-              alt="Спина"
-            />
-
+            loading="lazy"
+            class="block__img block__img_left"
+            src="images/png/flower.png"
+            alt="Спина"
+          />
             <div class="block__content">
+            
               <div class="block__heading">
                 Растительные ресурсы и продукты пчеловодства
               </div>
@@ -275,20 +298,18 @@
             </div>
           </div>
         </div>
-        <div class="block__item block__item_gray block_union">
-          <div class="block__heading_first">
-            Мы используем природные факторы и природно-климатические ресурсы
-          </div>
+        <div class="block__item block__item_gray block_union block__item_right">
           <div class="container">
-            <img
+           
+            <div class="block__content">
+              <div class="block__heading">Талассотерапия</div>
+              <img
               loading="lazy"
               class="block__img_first"
               src="images/png/tallassotherpy.png"
               alt="Горы"
             />
        
-            <div class="block__content">
-              <div class="block__heading">Талассотерапия</div>
               <div class="block__text">
                 Талассотерапия – направление курортного лечения, где максимально
                 используются все возможности моря: морская вода, морские
@@ -313,7 +334,7 @@
       </section>
       <section class="programs programs_white">
         <div class="container">
-          <div class="programs__heading">
+          <div class="programs__heading programs__heading_2">
             Разработаны и внедрены индивидуальные программы здоровья для всей семьи
           </div>
           <div class="programs__description">
@@ -800,7 +821,7 @@
           <div class="splide__track">
             <ul class="splide__list">
               <li class="splide__slide">
-                <img loading="lazy" src="images/png/floor.png" alt="Этаж" data-fancybox="group"/>
+                <img loading="lazy" src="images/png/floor.png" alt="Этаж"/>
               </li>
               <li class="splide__slide">
                 <img loading="lazy" src="images/png/floor.png" alt="Этаж" />
@@ -874,7 +895,7 @@
             <div class="footer__links_first">
               <div>
                 <a href="#">Методы лечения</a>
-                <a href="#">Направления лечения</a>
+                <a href="directions.html">Направления лечения</a>
                 <a href="#">Программы лечения</a>
                 <a href="#">Косметология и SPA</a>
                 <a href="#">CheckUp-диагностика</a>
@@ -890,7 +911,7 @@
             </div>
             <div class="footer__links">
               <a href="#">Методы лечения</a>
-              <a href="#">Направления лечения</a>
+              <a href="directions.html">Направления лечения</a>
               <a href="#">Программы лечения</a>
               <a href="#">Косметология и SPA</a>
               <a href="#">CheckUp-диагностика</a>
@@ -920,25 +941,20 @@
       </footer>
     </div>
 
-    <div class="modal modal__action">
-      <div class="modal-overlay modal-toggle"></div>
-      <div class="modal-wrapper modal-transition">
-        <div class="modal-body">
-          <img src="images/png/action.png" alt="Акция" />
-          <div class="modal-content">
-            <div class="modal__heading">Лазерная эпиляция со скидкой</div>
-            <div class="modal__info">
-              Персонализированный подход к оздоровлению, с использованием
-              уникальных современных технологий диагностики и оздоровления
-            </div>
-            <button class="button">Подробнее</button>
+    <div class="modal__action" id="modal__action">
+      <div class="modal-body">
+        <img loading="lazy" src="images/png/action.png" alt="Акция" />
+        <div class="modal-content">
+          <div class="modal__heading">Лазерная эпиляция со скидкой</div>
+          <div class="modal__info">
+            Персонализированный подход к оздоровлению, с использованием
+            уникальных современных технологий диагностики и оздоровления
           </div>
+          <button class="button">Подробнее</button>
         </div>
-        <span class="modal-close"
-          ><img src="images/svg/close.svg" alt="Close"
-        /></span>
       </div>
-    </div>
+    
+  </div>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
 
