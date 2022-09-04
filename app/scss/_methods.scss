@@ -105,14 +105,15 @@
 }
 
 .persons {
-    background-image: url("../images/svg/Union_circle.svg");
+    background-image: url("../images/svg/methods_union_4.svg");
     background-repeat: no-repeat;
-    background-position: top -50px right -500px;
+    background-position: top 50px right 0px;
     padding-bottom: 108px;
     padding-top: 20px;
 
     @media (max-width: 768px) {
         padding-bottom: 40px;
+        background-image: none;
     }
 
     &__button {
@@ -274,23 +275,23 @@
     }
 
     &:nth-child(1) {
-        background-image: url("../images/png/predictive.png");
+        background-image: url("../images/png/predictive.webp");
     }
 
     &:nth-child(2) {
-        background-image: url("../images/png/personofication.png");
+        background-image: url("../images/png/personofication.webp");
     }
 
     &:nth-child(3) {
-        background-image: url("../images/png/precautionary.png");
+        background-image: url("../images/png/precautionary.webp");
     }
 
     &:nth-child(4) {
-        background-image: url("../images/png/participatory.png");
+        background-image: url("../images/png/participatory.webp");
     }
 
     &:nth-child(5) {
-        background-image: url("../images/png/positivity.png");
+        background-image: url("../images/png/positivity.webp");
     }
     &:last-child {
         @media (max-width: 768px) {

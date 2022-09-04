@@ -102,23 +102,33 @@ body {
 
 
 .block {
-    &_union {
-        background-image: url("../images/svg/Union3.svg");
+
+    &_union_left_bottom {
+        background-image: url("../images/svg/methods_union_2.svg");
         background-repeat: no-repeat;
-        background-position: top 600px left 0px;
+        background-position: bottom -400px left 0px;
+
+    }
+
+    &_union_left_top {
+        background-image: url("../images/svg/methods_union_3.svg");
+        background-repeat: no-repeat;
+        background-position: top 0px left 0px;
 
     }
 
     &_union_left {
-        background-image: url("../images/svg/Union_left.svg");
+        background-image: url("../images/svg/main_union_1.svg");
         background-repeat: no-repeat;
         background-position: bottom 10% left 0px;
         background-size: 20%;
+
         @media (max-width: 1024px) {
-            background-image:none;
+            background-image: none;
         }
 
     }
+
 
     &__button {
         display: block;
@@ -257,14 +267,16 @@ body {
         padding-bottom: 127px;
 
         @media (max-width: 1024px) {
+            padding-top: 30px !important;
+            padding-bottom: 51px;
             .block__content {
                 margin-top: 0px !important;
             }
         }
 
-        @media (max-width: 1024px) {
-            padding-top: 30px !important;
-            padding-bottom: 51px;
+
+        @media (max-width: 768px) {
+            background-image: none;
         }
 
         &_1 {
@@ -322,8 +334,8 @@ body {
         }
 
         &_left {
-            
-            
+
+
             .container {
                 padding-left: 0px;
 
@@ -334,7 +346,6 @@ body {
         }
 
         &_right {
-            background-image: url("../images/svg/union_left_top.svg");
             .container {
                 padding-right: 0px;
 
@@ -343,6 +354,9 @@ body {
                 }
             }
         }
+
+
+
 
 
         .container {
@@ -355,15 +369,15 @@ body {
 
             }
         }
-
-
-
-        &_gray {
-            background-color: $color-gray;
-        }
-
-
     }
+
+
+    &_gray {
+        background-color: $color-gray;
+    }
+
+
+
 
 
 
@@ -524,9 +538,10 @@ body {
     padding-top: 96px;
     background: $color-gray;
     padding-bottom: 135px;
-    background-image: url("../images/svg/Union.svg");
+    background-image: url("../images/svg/main_union_2.svg");
     background-repeat: no-repeat;
-    background-position: top -100px right 100px;
+    background-position: top -200px right -100px;
+
     @media (max-width: 1024px) {
         background-image: none;
     }
@@ -1014,13 +1029,14 @@ label {
 .description {
     padding-top: 27px;
     padding-bottom: 68px;
-    background-image: url("../images/svg/Union2.svg");
+    background-image: url("../images/svg/methods_union_1.svg");
     background-color: #FAFAFA;
     background-repeat: no-repeat;
-    background-position: top 0px right 0px;
+    background-position: top -100px right 0px;
 
     @media (max-width: 768px) {
-        background-size: 150%;
+        background-size: 80%;
+        background-position: top 20px right 0px;
     }
 
 

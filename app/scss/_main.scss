@@ -6,12 +6,12 @@
     color: $color-white;
     padding-bottom: 208px;
     position: relative;
-    background-image: url("../images/png/main_bg.png");
+    background-image: url("../images/png/main_bg.webp");
 
     &_video {
         background-image: none;
         @media (max-width: 768px) {
-            background-image: url("../images/png/main_bg.png");
+            background-image: url("../images/png/main_bg.webp");
         }
     }
 

@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     perPage: 1,
     arrows: false,
     pagination: false,
-    rewindByDrag: false,
+    drag: false,
   }).mount();
 
   Array.from(
@@ -250,6 +250,3 @@ window.onclick = function (event) {
     );
   }
 };
-
-
-

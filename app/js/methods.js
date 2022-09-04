@@ -58,7 +58,7 @@ const programs_carousel = new Splide(".programs__carousel", {
   perPage: 1,
   arrows: false,
   pagination: false,
-  rewindByDrag: false,
+  drag: false,
 }).mount();
 Array.from(
   document.querySelector(".programs__buttons").querySelectorAll(".button")
