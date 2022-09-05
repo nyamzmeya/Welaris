@@ -1,0 +1,46 @@
+$color-violet: #666981;
+$color-black: #000000;
+$color-white: #FFFFFF;
+$color-dark: #343434;
+$color-gray-light: #DFE0EA;
+$color-violet-light: #7B7E94;
+$color-gray: #FAFAFA;
+
+
+@mixin flex-column-gap($gap) {
+    display: flex;
+    column-gap: $gap;
+    align-items: center;
+}
+
+@mixin heading {
+    font-size: 40px;
+    line-height: 51px;
+    font-weight: 400;
+
+    @media (max-width: 768px) {
+        font-size: 26px;
+        line-height: 30px;
+    }
+}
+
+@mixin heading-2 {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 51px;
+
+    @media (max-width: 768px) {
+        font-size: 24px;
+        line-height: 30px;
+    }
+}
+
+@mixin regular-pro {
+    font-family: 'GothamPro';
+    line-height: 33px;
+}
+
+@mixin button ($font, $padding-top, $padding-right) {
+    font-family: $font;
+    padding: $padding-top $padding-right;
+}

@@ -1,0 +1,353 @@
+.five {
+    padding-top: 97px;
+    padding-bottom: 96px;
+    overflow-x: hidden;
+
+    @media (max-width: 768px) {
+        padding-top: 43px;
+        padding-bottom: 43px;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 110%;
+
+        @media (max-width: 1400px) {
+            width: 100%;
+        }
+
+        &__circle {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            @media (max-width: 1300px) {
+                flex-direction: column;
+                row-gap: 34px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+
+        }
+    }
+
+    &__circle {
+        color: $color-white;
+        background: $color-violet;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 60px;
+        width: 275px;
+        height: 275px;
+
+        @media (max-width: 768px) {
+            width: 175px;
+            height: 175px;
+            font-size: 50px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__description {
+        width: 39%;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+
+    }
+
+    &__heading {
+        font-family: 'GothamPro';
+        display: block;
+        font-family: "Lora";
+        @include heading;
+        margin-bottom: 41px;
+
+        &_first {
+            font-size: 60px;
+            line-height: 60px;
+            color: $color-violet;
+            margin: 0px auto 42px auto;
+            width: fit-content;
+            display: none;
+
+            @media (max-width: 768px) {
+                display: block;
+            }
+        }
+
+        @media (max-width: 768px) {
+            margin-bottom: 13px;
+        }
+    }
+
+    &__info {
+        font-family: 'GothamPro';
+
+        li {
+            line-height: 33px;
+            margin-bottom: 30px;
+
+            @media (max-width: 768px) {
+                line-height: 25px;
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+.persons {
+    background-image: url("../images/svg/methods_union_4.svg");
+    background-repeat: no-repeat;
+    background-position: top 50px right 0px;
+    padding-bottom: 108px;
+    padding-top: 20px;
+
+    @media (max-width: 768px) {
+        padding-bottom: 40px;
+        background-image: none;
+    }
+
+    &__button {
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+
+    }
+
+    &__flex {
+        margin-bottom: 50px;
+        width: 100%;
+
+        .splide__arrows {
+            .splide__arrow {
+                opacity: 1 !important;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                font-weight: 500;
+                border-radius: 0%;
+                top: 78%;
+            }
+
+            .splide__arrow--prev {
+                background-color: $color-white;
+                color: $color-violet;
+                left: calc(50% + 48px);
+                @media (max-width: 376px) {
+                    right: 50px;
+                    left: auto;
+                }
+
+                &::before {
+                    content: "\fe64";
+
+
+                }
+
+            }
+
+            .splide__arrow--next {
+                color: $color-white;
+                background-color: $color-violet;
+                right: calc(50% - 148px);
+                @media (max-width: 376px) {
+                    right: 0px;
+                }
+
+                &::before {
+                    content: "\fe65";
+
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            margin-bottom: 0px;
+        }
+    }
+
+    &__img {
+        margin-bottom: 20px;
+    }
+
+    &__name {
+        margin-bottom: 13px;
+    }
+
+    &__job {
+        font-family: 'GothamPro';
+        margin-bottom: 30px;
+    }
+
+    &__link {
+
+        transition: 0.3s ease-in;
+
+        @media (max-width: 768px) {
+            display: none !important;
+        }
+
+        a {
+            color: $color-dark;
+            font-size: 18px;
+
+            img {
+                display: inline-block;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    &__item {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+        a {
+            color: $color-dark;
+        }
+        
+
+        @media (max-width: 768px) {
+            text-align: center;
+        }
+
+        @media (max-width: 376px) {
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+
+        span {
+            display: block;
+        }
+
+
+
+    }
+}
+
+
+.floors {
+    padding-bottom: 104px;
+
+    @media (max-width: 1200px) {
+        padding-bottom: 50px;
+    }
+}
+
+@mixin on-circle($item-count, $circle-size, $item-size) {
+    position: relative;
+    width: $circle-size + 150;
+    height: $circle-size + 150;
+    border-radius: 50%;
+    padding: 0;
+    list-style: none;
+
+    >* {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -($item-size / 2);
+        width: $item-size;
+        height: $item-size;
+
+        $angle: (360 / $item-count);
+        $rot: 0;
+
+        @for $i from 1 through $item-count {
+            &:nth-of-type(#{$i}) {
+                transform: rotate($rot * 1deg - 20) translate($circle-size / 2) rotate($rot * -1deg + 20);
+            }
+
+            $rot: $rot+$angle;
+        }
+
+
+    }
+}
+
+.circle-container {
+    @include on-circle($item-count: 5, $circle-size: 450px, $item-size: 175px);
+
+    @media (max-width: 768px) {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        row-gap: 23px;
+
+        >* {
+            transform: none !important;
+            position: relative;
+            margin: 0px;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+.circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
+    row-gap: 10px;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    color: $color-white;
+    text-align: center;
+    font-family: 'GothamPro';
+
+    &_main {
+        box-shadow: none;
+        font-family: 'Lora';
+        font-size: 60px;
+        color: $color-violet;
+    }
+
+    &__text {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    &__name {
+        font-weight: 700;
+    }
+
+    &:nth-child(1) {
+        background-image: url("../images/png/predictive.png");
+    }
+
+    &:nth-child(2) {
+        background-image: url("../images/png/personofication.png");
+    }
+
+    &:nth-child(3) {
+        background-image: url("../images/png/precautionary.png");
+    }
+
+    &:nth-child(4) {
+        background-image: url("../images/png/participatory.png");
+    }
+
+    &:nth-child(5) {
+        background-image: url("../images/png/positivity.png");
+    }
+
+    &:last-child {
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+}

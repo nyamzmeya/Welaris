@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welaris</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
+    />
+    <link rel="stylesheet" href="css/main_style.min.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container flex">
+        <div class="header__first">
+          <button class="hamburger">
+            <div class="btn__hamb btn__hamb--triangle-inverce">
+              <div></div>
+            </div>
+          </button>
+          <div class="header__logo">
+           <a href="#">  <img loading="lazy" src="images/svg/logo.svg" alt="Welaris" class="img1" width="262"
+            height="47"/>
+            <img loading="lazy" src="images/svg/logo_sm.svg" alt="Welaris" class="img2" width="164"
+            height="30" /></a>
+          </div>
+        </div>
+        <ul class="header__links">
+          <li><a href="#">Бронирования</a></li>
+          <li><a href="programs.html">Программы</a></li>
+          <li><a href="#">Врачи</a></li>
+          <li class="services__open">
+            <a href="#">Услуги</a>
+            <div class="services">
+              <ul class="services__links">
+                <li><a href="#">Антистресс </a></li>
+                <li><a href="#">Гастроэнтерология</a></li>
+                <li><a href="#">Детокс</a></li>
+                <li><a href="#">Диагностическая программа ChekUp</a></li>
+                <li><a href="#">А Женское здоровье</a></li>
+                <li><a href="#">А Здоровые легкие</a></li>
+                <li><a href="#">Мужское здоровье</a></li>
+                <li><a href="#">Оздоровление</a></li>
+                <li><a href="#">Повышение иммунитета</a></li>
+                <li><a href="#">Поздняя кардиологическая реабилитация</a></li>
+                <li><a href="#">Сахарный диабет</a></li>
+                <li><a href="#">Свободное движение</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#">Акции</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+        <div class="header__info">
+          <a
+            class="toast_first_open telephone"
+            data-text="+7 795 678 45 67"
+            data-img="false"
+            data-href="tel:+77956784567"
+            ><img loading="lazy" src="images/svg/phone.svg" alt="Телефон" width="30"
+            height="30"
+          /></a>
+          <a
+            class="toast_first_open"
+            data-text="пгт Сириус, ул.65 лет Победы 50"
+            data-img="true"
+            data-href=""
+            ><img loading="lazy" src="images/svg/pin.svg" alt="Пин" width="30"
+            height="30"
+          /></a>
+        </div>
+        <div class="header__menu">
+          <ul class="header__menu__links">
+            <li><a class="services__open" href="#">Услуги</a></li>
+            <li><a href="#">Стоимость</a></li>
+            <li><a href="programs.html">Программы лечения</a></li>
+            <li><a href="methods.html">Методы лечения</a></li>
+            <li><a href="#">Косметология и SPA</a></li>
+            <li><a href="#">Чек ап</a></li>
+            <li><a href="#">Врачи</a></li>
+            <li><a href="#">Размещение</a></li>
+            <li><a href="#">Бронирование</a></li>
+            <li><a href="#">Расположение</a></li>
+            <li><a href="#">Акции</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="toast toast_first">
+          <div class="toast__content">
+            <img loading="lazy"
+              class="toast_first__img"
+              src="images/svg/pin.svg"
+              alt="Место"
+              width="30"
+          height="30"
+            />
+            <span class="toast_first__text"></span>
+            <span class="toast_first__close toast__close"
+              ><img loading="lazy" src="images/svg/close.svg" alt="Закрыть" width="12"
+              height="12"
+            /></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="header__overlay"></div>
+
+    <div class="wrapper">
+      <section class="main">
+        <div class="container">
+          <div class="main__toasts">
+            <div class="toast toast_second">
+              <div class="toast__content">
+                <img loading="lazy" src="images/svg/award.svg" alt="GQ" width="79"
+                height="81"/>
+                <span
+                  >Лауреат премии GQ Travel Awards 2021 в номинации «Лучший
+                  оздоровительный комплекс»</span
+                >
+                <span class="toast__close toast_second__close"
+                  ><img loading="lazy" src="images/svg/close.svg" alt="Закрыть" width="12"
+                  height="12"
+                /></span>
+              </div>
+            </div>
+
+            <div class="toast toast_second">
+              <div class="toast__content">
+                <img loading="lazy" src="images/svg/award.svg" alt="GQ" width="79"
+                height="81"/>
+                <span
+                  >Лауреат премии GQ Travel Awards 2021 в номинации «Лучший
+                  оздоровительный комплекс»</span
+                >
+                <span class="toast__close toast_second__close"
+                  ><img loading="lazy" src="images/svg/close.svg" alt="Закрыть" width="12"
+                  height="12"
+                /></span>
+              </div>
+            </div>
+          </div>
+          <h1 class="main__heading">
+            Совмещение премиального отдыха 5* с полноценным Check-­up, лечением
+            и оздоровлением
+          </h1>
+          <div class="main__content">
+            <button class="main__button">Записаться на прием</button>
+            <div class="main__social">
+              <a href="#"
+                ><img loading="lazy" src="images/svg/vk-social-network-logo 1.svg" alt="Вк" width="32"
+                height="32"
+              /></a>
+              <a href="#"
+                ><img loading="lazy" src="images/svg/telegram-_5_ 1.svg" alt="Телеграмм" width="30"
+                height="30"
+              /></a>
+            </div>
+          </div>
+
+          
+        </div>
+      </section>
+      <section class="order">
+        <div class="container">
+          <div class="order__widgets">
+            <div class="order__calendar">
+              <div class="order__calendar__first"><span>Заезд</span>
+                <div class="verticle-line"></div></div>
+              <input type="date" id="start-date" name="trip-start" />
+
+              <img loading="lazy" src="images/svg/calendar.svg" alt="Календарь" width="25"
+              height="25"/>
+            </div>
+
+            <div class="order__calendar">
+              <div class="order__calendar__first"><span>Выезд</span>
+                <div class="verticle-line"></div></div>
+              <input type="date" id="end-date" name="trip-end" />
+
+              <img loading="lazy" src="images/svg/calendar.svg" alt="Календарь" width="25"
+              height="25"/>
+            </div>
+
+            <button class="order__button  button">
+              Найти программу
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="methods">
+       
+        <div class="block__item block__item_gray block__item_1 block__item_right block_union_left">
+       <div class="container">
+        <div class="block__content">
+          <div class="block__heading">Инновационные методы лечения</div>
+          <picture class="block__img_first"><source srcset="images/webp/method1.webp" type="image/webp"><img loading="lazy"
+           
+            src="images/png/method1.png"
+            alt="Спина"
+            width="750"
+            height="521"
+          /></picture>
+          <div class="block__text">
+            Персонализированный подход к оздоровлению, с использованием
+            уникальных современных технологий диагностики и оздоровления и
+            превентивной медицины
+          </div>
+          <div class="block__link">
+            Методы лечения
+            <a href="methods.html" class="block__arrow"
+              ><img loading="lazy" src="images/svg/Arrow1.svg" alt="Перейти" width="86" height="2"
+            /></a>
+          </div>
+        </div>
+
+        <picture class="block__img block__img_right"><source srcset="images/webp/method1.webp" type="image/webp"><img        
+          src="images/png/method1.png"
+          alt="Спина"
+          width="750"
+          height="521"
+        /></picture></div>
+        
+      </div>
+      <div class="block__item block__item_2 block__item_left">
+       <div class="container">
+        
+        <picture class="block__img block__img_left"><source srcset="images/webp/method2.webp" type="image/webp"><img loading="lazy"
+        
+        src="images/png/method2.png"
+        alt="Спина"
+        width="750"
+        height="521"
+      /></picture>
+
+      <div class="block__content">
+        <div class="block__heading">Косметология и SPA</div>
+        <picture class="block__img_first"><source srcset="images/webp/method2.webp" type="image/webp"><img 
+          
+          src="images/png/method2.png"
+          alt="Спина"
+          width="750"
+          height="521"
+        /></picture>
+        <div class="block__text">
+          Территория полного расслабления, очищения и омоложения в
+          комфортабельной SPA-зоне
+        </div>
+        <div class="block__buttons">
+          <button class="button ">SPA зона</button>
+          <button class="button">Косметология центра</button>
+        </div>
+    
+    </div>
+       </div>
+      </div>
+       
+      </section>
+      <section class="programs">
+        <div class="container">
+          <div class="programs__heading">
+            Индивидуальные программы здоровья для всей семьи
+          </div>
+          <div class="programs__description">
+            Оздоровление и диагностика для всей семьи, наличие детских
+            лечебно-оздоровительных и превентивных программ, организация их
+            досуга, а так же наличие оздоровительных програм клиентов "высокого
+            возраста"
+          </div>
+          <div class="programs__buttons flex">
+            <button class="button" data-index="1">
+              Дыхательная система и ЛОР патология у взрослых и детей
+            </button>
+            <button class="button" data-index="2">
+              Заболевания опорно-двигательного аппарата
+            </button>
+            <button class="button" data-index="3">
+              Невротические реакции: депрессия, синдром хронической усталости
+            </button>
+            <button class="button" data-index="4">
+              Урология и геникология
+            </button>
+            <button class="button" data-index="5">
+              Сердечно - сосудистая система
+            </button>
+            <button class="button" data-index="6">
+              Заболевания органов пищеварения
+            </button>
+          </div>
+          <div class="programs__select">
+            <div class="custom-select">
+              <select>
+                <option selected value="1">
+                  Дыхательная система и ЛОР патология у взрослых и детей
+                </option>
+
+                <option value="2" class="short">
+                  Заболевания опорно-двигательного аппарата
+                </option>
+                <option value="3" class="short">
+                  Невротические реакции: депрессия, синдром хронической
+                  усталости
+                </option>
+                <option value="4" class="short">Урология и геникология</option>
+                <option value="5" class="short">
+                  Сердечно - сосудистая система
+                </option>
+                <option value="6" class="short">
+                  Заболевания органов пищеварения
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="splide programs__carousel">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide programs__slide">
+                <div class="container flex">
+                  <div class="programs__slide__name programs__slide__name_first">
+                    <span>Вам подойдет:</span>Программа "Здоровое дыхание"
+                  </div>
+                  <div class="programs__slide__text">
+                    <div class="programs__slide__name">
+                      <span>Вам подойдет:</span>Программа "Здоровое дыхание"
+                    </div>
+                    <div class="programs__slide__items">
+                      <span>хронический синусит</span>
+                      <span>хронический ларингит</span>
+                      <span>хронический фарингит</span>
+                      <span>хронический бронхит</span>
+                      <span>аллергический ринит</span>
+                      <span>бронхиальная астма</span>
+                      <span>частые ОРВИ</span>
+                      <span
+                        >аллергические и атопические заболевания у детей и
+                        взрослых</span
+                      >
+                      <span>хронический ларингит</span>
+                    </div>
+                    <button class="button ">
+                      Смотреть программу
+                    </button>
+                  </div>
+                  <div class="splide programs__slide__img">
+                    <div class="splide__arrows">
+                      <button class="splide__arrow splide__arrow--prev">
+                        <img src="images/svg/arrow_sm_left.svg" alt="Назад" width="64" height="2">
+                      </button>
+                      <button class="splide__arrow splide__arrow--next">
+                        <img src="images/svg/arrow_sm_right.svg" alt="Вперед" width="64" height="2">
+                      </button>
+                    </div>
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                      <li class="splide__slide"> 
+                        <picture><source srcset="images/webp/program1.webp" type="image/webp"><img loading="lazy"
+                        src="images/png/program1.png"
+                        alt="Медитация"  width="750"
+                        height="521"/></picture>
+                      </li>
+                      <li class="splide__slide">
+                        <picture><source srcset="images/webp/program1.webp" type="image/webp"><img loading="lazy"
+                        src="images/png/program1.png"
+                        alt="Медитация"  width="750"
+                        height="521"/></picture>
+                      </li>
+                      <li class="splide__slide">
+                        <picture><source srcset="images/webp/program1.webp" type="image/webp"><img loading="lazy"
+                        src="images/png/program1.png"
+                        alt="Медитация"  width="750"
+                        height="521"/></picture>
+                      </li>
+                      </ul>
+                    </div>
+                </div>
+              </li>
+
+              <li class="splide__slide programs__slide">
+                <div class="container flex">
+                  <div class="programs__slide__name programs__slide__name_first">
+                    <span>Вам подойдет:</span>Программа "Здоровое дыхание"
+                  </div>
+
+                  <div class="programs__slide__text">
+                    <div class="programs__slide__name">
+                      <span>Вам подойдет:</span>Программа "Здоровое дыхание"
+                    </div>
+                    <div class="programs__slide__items">
+                      <span>хронический синусит</span>
+                      <span>хронический ларингит</span>
+                      <span>хронический фарингит</span>
+                      <span>хронический бронхит</span>
+                      <span>аллергический ринит</span>
+                      <span>бронхиальная астма</span>
+                      <span>частые ОРВИ</span>
+                      <span
+                        >аллергические и атопические заболевания у детей и
+                        взрослых</span
+                      >
+                      <span>хронический ларингит</span>
+                    </div>
+                    <button class="button ">
+                      Смотреть программу
+                    </button>
+                  </div>
+                  <div class="splide programs__slide__img">
+                    <div class="splide__arrows">
+                      <button class="splide__arrow splide__arrow--prev">
+                        <img src="images/svg/arrow_sm_left.svg" alt="Назад" width="64" height="2">
+                      </button>
+                      <button class="splide__arrow splide__arrow--next">
+                        <img src="images/svg/arrow_sm_right.svg" alt="Вперед" width="64" height="2">
+                      </button>
+                    </div>
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                      <li class="splide__slide"> 
+                        <picture><source srcset="images/webp/program1.webp" type="image/webp"><img loading="lazy"
+                        src="images/png/program1.png"
+                        alt="Медитация"  width="746"
+                        height="501"/></picture>
+                      </li>
+                      <li class="splide__slide">
+                        <picture><source srcset="images/webp/program1.webp" type="image/webp"><img loading="lazy"
+                        src="images/png/program1.png"
+                        alt="Медитация" width="746"
+                        height="501"/></picture>
+                      </li>
+                      <li class="splide__slide">
+                        <picture><source srcset="images/webp/program1.webp" type="image/webp"><img loading="lazy"
+                        src="images/png/program1.png"
+                        alt="Медитация" width="746"
+                        height="501"/></picture>
+                      </li>
+                      </ul>
+                    </div>
+                </div>
+              </li>
+
+              <li class="splide__slide programs__slide">
+                <div class="container flex">
+                  <div class="programs__slide__name programs__slide__name_first">
+                    <span>Вам подойдет:</span>Программа "Здоровое дыхание"
+                  </div>
+                  <div class="programs__slide__text">
+                    <div class="programs__slide__name">
+                      <span>Вам подойдет:</span>Программа "Здоровое дыхание"
+                    </div>
+                    <div class="programs__slide__items">
+                      <span>хронический синусит</span>
+                      <span>хронический ларингит</span>
+                      <span>хронический фарингит</span>
+                      <span>хронический бронхит</span>
+                      <span>аллергический ринит</span>
+                      <span>бронхиальная астма</span>
+                      <span>частые ОРВИ</span>
+                      <span
+                        >аллергические и атопические заболевания у детей и
+                        взрослых</span
+                      >
+                      <span>хронический ларингит</span>
+                    </div>
+                    <button class="button ">
+                      Смотреть программу
+                    </button>
+                  </div>
+                  <div class="splide programs__slide__img">
+                    <div class="splide__arrows">
+                      <button class="splide__arrow splide__arrow--prev">
+                        <img src="images/svg/arrow_sm_left.svg" alt="Назад" width="64" height="2">
+                      </button>
+                      <button class="splide__arrow splide__arrow--next">
+                        <img src="images/svg/arrow_sm_right.svg" alt="Вперед" width="64" height="2">
+                      </button>
+                    </div>
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                      <li class="splide__slide"> 
+                        <picture><source srcset="images/webp/program1.webp" type="image/webp"><img loading="lazy"
+                        src="images/png/program1.png"
+                        alt="Медитация" width="746"
+                        height="501"/></picture>
+                      </li>
+                      <li class="splide__slide">
+                        <picture><source srcset="images/webp/program1.webp" type="image/webp"><img loading="lazy"
+                        src="images/png/program1.png"
+                        alt="Медитация" width="746"
+                        height="501"/></picture>
+                      </li>
+                      <li class="splide__slide">
+                        <picture><source srcset="images/webp/program1.webp" type="image/webp"><img loading="lazy"
+                        src="images/png/program1.png"
+                        alt="Медитация" width="746"
+                        height="501"/></picture>
+                      </li>
+                      </ul>
+                    </div>
+                </div>
+                </div>
+              </li>
+
+              <li class="splide__slide programs__slide">
+                <div class="container flex">
+                  <div class="programs__slide__name programs__slide__name_first">
+                    <span>Вам подойдет:</span>Программа "Здоровое дыхание"
+                  </div>
+                  <div class="programs__slide__text">
+                    <div class="programs__slide__name">
+                      <span>Вам подойдет:</span>Программа "Здоровое дыхание"
+                    </div>
+                    <div class="programs__slide__items">
+                      <span>хронический синусит</span>
+                      <span>хронический ларингит</span>
+                      <span>хронический фарингит</span>
+                      <span>хронический бронхит</span>
+                      <span>аллергический ринит</span>
+                      <span>бронхиальная астма</span>
+                      <span>частые ОРВИ</span>
+                      <span
+                        >аллергические и атопические заболевания у детей и
+                        взрослых</span
+                      >
+                      <span>хронический ларингит</span>
+                    </div>
+                    <button class="button ">
+                      Смотреть программу
+                    </button>
+                  </div>
+                  <div class="splide programs__slide__img">
+                    <div class="splide__arrows">
+                      <button class="splide__arrow splide__arrow--prev">
+                        <img src="images/svg/arrow_sm_left.svg" alt="Назад" width="64" height="2">
+                      </button>
+                      <button class="splide__arrow splide__arrow--next">
+                        <img src="images/svg/arrow_sm_right.svg" alt="Вперед" width="64" height="2">
+                      </button>
+                    </div>
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                      <li class="splide__slide"> 
+                        <picture><source srcset="images/webp/program1.webp" type="image/webp"><img loading="lazy"
+                        src="images/png/program1.png"
+                        alt="Медитация" width="746"
+                        height="501"/></picture>
+                      </li>
+                      <li class="splide__slide">
+                        <picture><source srcset="images/webp/program1.webp" type="image/webp"><img loading="lazy"
+                        src="images/png/program1.png"
+                        alt="Медитация" width="746"
+                        height="501"/></picture>
+                      </li>
+                      <li class="splide__slide">
+                        <picture><source srcset="images/webp/program1.webp" type="image/webp"><img loading="lazy"
+                        src="images/png/program1.png"
+                        alt="Медитация" width="746"
+                        height="501"/></picture>
+                      </li>
+                      </ul>
+                    </div>
+                </div>
+              </li>
+
+              <li class="splide__slide programs__slide">
+                <div class="programs__slide__name programs__slide__name_first">
+                  <span>Вам подойдет:</span>Программа "Здоровое дыхание"
+                </div>
+                <div class="container flex">
+                  <div class="programs__slide__text">
+                    <div class="programs__slide__name">
+                      <span>Вам подойдет:</span>Программа "Здоровое дыхание"
+                    </div>
+                    <div class="programs__slide__items">
+                      <span>хронический синусит</span>
+                      <span>хронический ларингит</span>
+                      <span>хронический фарингит</span>
+                      <span>хронический бронхит</span>
+                      <span>аллергический ринит</span>
+                      <span>бронхиальная астма</span>
+                      <span>частые ОРВИ</span>
+                      <span
+                        >аллергические и атопические заболевания у детей и
+                        взрослых</span
+                      >
+                      <span>хронический ларингит</span>
+                    </div>
+                    <button class="button ">
+                      Смотреть программу
+                    </button>
+                  </div>
+                  <div class="splide programs__slide__img">
+                    <div class="splide__arrows">
+                      <button class="splide__arrow splide__arrow--prev">
+                        <img src="images/svg/arrow_sm_left.svg" alt="Назад" width="64" height="2">
+                      </button>
+                      <button class="splide__arrow splide__arrow--next">
+                        <img src="images/svg/arrow_sm_right.svg" alt="Вперед" width="64" height="2">
+                      </button>
+                    </div>
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                      <li class="splide__slide"> 
+                        <picture><source srcset="images/webp/program1.webp" type="image/webp"><img loading="lazy"
+                        src="images/png/program1.png"
+                        alt="Медитация" width="746"
+                        height="501"/></picture>
+                      </li>
+                      <li class="splide__slide">
+                        <picture><source srcset="images/webp/program1.webp" type="image/webp"><img loading="lazy"
+                        src="images/png/program1.png"
+                        alt="Медитация" width="746"
+                        height="501"/></picture>
+                      </li>
+                      <li class="splide__slide">
+                        <picture><source srcset="images/webp/program1.webp" type="image/webp"><img loading="lazy"
+                        src="images/png/program1.png"
+                        alt="Медитация" width="746"
+                        height="501"/></picture>
+                      </li>
+                      </ul>
+                    </div>
+                </div>
+              </li>
+
+              <li class="splide__slide programs__slide">
+                <div class="container flex">
+                  <div class="programs__slide__name programs__slide__name_first">
+                    <span>Вам подойдет:</span>Программа "Здоровое дыхание"
+                  </div>
+                  <div class="programs__slide__text">
+                    <div class="programs__slide__name">
+                      <span>Вам подойдет:</span>Программа "Здоровое дыхание"
+                    </div>
+                    <div class="programs__slide__items">
+                      <span>хронический синусит</span>
+                      <span>хронический ларингит</span>
+                      <span>хронический фарингит</span>
+                      <span>хронический бронхит</span>
+                      <span>аллергический ринит</span>
+                      <span>бронхиальная астма</span>
+                      <span>частые ОРВИ</span>
+                      <span
+                        >аллергические и атопические заболевания у детей и
+                        взрослых</span
+                      >
+                      <span>хронический ларингит</span>
+                    </div>
+                    <button class="button ">
+                      Смотреть программу
+                    </button>
+                  </div>
+                  <div class="splide programs__slide__img">
+                    <div class="splide__arrows">
+                      <button class="splide__arrow splide__arrow--prev">
+                        <img src="images/svg/arrow_sm_left.svg" alt="Назад" width="64" height="2">
+                      </button>
+                      <button class="splide__arrow splide__arrow--next">
+                        <img src="images/svg/arrow_sm_right.svg" alt="Вперед" width="64" height="2">
+                      </button>
+                    </div>
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                      <li class="splide__slide"> 
+                        <picture><source srcset="images/webp/program1.webp" type="image/webp"><img loading="lazy"
+                        src="images/png/program1.png"
+                        alt="Медитация" width="746"
+                        height="501"/></picture>
+                      </li>
+                      <li class="splide__slide">
+                        <picture><source srcset="images/webp/program1.webp" type="image/webp"><img loading="lazy"
+                        src="images/png/program1.png"
+                        alt="Медитация" width="746"
+                        height="501"/></picture>
+                      </li>
+                      <li class="splide__slide">
+                        <picture><source srcset="images/webp/program1.webp" type="image/webp"><img loading="lazy"
+                        src="images/png/program1.png"
+                        alt="Медитация" width="746"
+                        height="501"/></picture>
+                      </li>
+                      </ul>
+                    </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="check">
+      
+        <div class="block__item block__item_3 block__item_left">
+         <div class="container">
+          
+          <picture class="block__img block__img_left"><source srcset="images/webp/check-up.webp" type="image/webp"><img loading="lazy"
+            
+            src="images/png/check-up.png"
+            alt="Check-up" width="750"
+            height="521"
+          /></picture>
+          <div class="block__content">
+            <div class="block__heading">Комплексная CheckUp-диагностика</div>
+            <picture  class="block__img_first"><source srcset="images/webp/check-up.webp" type="image/webp"><img 
+             
+              src="images/png/check-up.png"
+              alt="Check-up"
+              width="750"
+            height="521"
+            /></picture>
+            <div class="block__text">
+              Сочетание экспресс-­оздоровления, полноценного Check-­up с
+              возможностью проведения различных мероприятий: бизнес семинаров,
+              конференций, фестивалей, спортивных соревнований, различных
+              модульных образовательных программ
+            </div>
+            <div class="block__link">
+              Подробнее ChekUp
+              <a href="#" class="block__arrow"
+                ><img loading="lazy" src="images/svg/Arrow1.svg" alt="Перейти" width="86" height="2"
+              /></a>
+            </div>
+          
+        </div>
+         </div>
+      </div>
+       
+      </section>
+      <section class="info">
+        <div class="container">
+          <div class="block__heading_first">
+            Мы решаем задачи вашего здоровья с комфортом для вас
+          </div>
+          <div class="block__flex flex">
+            <div class="block__flex__item">
+              <span class="block__flex__heading">Первичная консультация</span>
+              <span
+                >Оценка состояния здоровья , составление рекомендаций по
+                лабораторной и аппаратной диагностике, выдача предварительных
+                рекомендаций.</span
+              >
+            </div>
+
+            <div class="block__flex__item">
+              <span class="block__flex__heading">Сдача анализов</span>
+              <span
+                >Сдача анализов в медицинском центре, точный анализ резулятатов
+                и предоставление сведений в удомном для вас виде.</span
+              >
+            </div>
+
+            <div class="block__flex__item">
+              <span class="block__flex__heading"
+                >Консультация с лечащим врачем</span
+              >
+              <span
+                >Расшифровка лабораторных исследований, уточнение деталей и
+                назначение программы терапии.</span
+              >
+            </div>
+
+            <div class="block__flex__item">
+              <span class="block__flex__heading">Прохождение терапии</span>
+              <span
+                >Соблюдение рекомендаций по индивидуальному курсу оздоровления,
+                прохождение подобранной программы лечения</span
+              >
+            </div>
+          </div>
+          <button class="button  block__button">
+            Записаться на прием
+          </button>
+          <div class="block__heading_first block__heading_first_big">
+            Современные комфортные и полностью оборудованные кабинеты
+          </div>
+          <div class="floors__buttons">
+            <button class="button-light" data-index="1">1 этаж</button>
+            <button class="button-light" data-index="2">2 этаж</button>
+          </div>
+          <div class="splide info__floors">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <picture><source srcset="images/webp/floor.webp" type="image/webp"><img loading="lazy" src="images/png/floor.png" alt="Этаж" width="1031"
+                  height="562"/></picture>
+                </li>
+                <li class="splide__slide">
+                  <picture><source srcset="images/webp/floor.webp" type="image/webp"><img loading="lazy" src="images/png/floor.png" alt="Этаж" width="1031"
+                  height="562"/></picture>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="block__item block__item_4 block__item_right">
+          <div class="block__heading_first">
+            Проживание в премиальном отеле сочи с собственным пляжем
+          </div>
+          <div class="container">
+            <picture class="block__img_first"><source srcset="images/webp/welaris_house.webp" type="image/webp"><img loading="lazy"
+              
+              src="images/png/welaris_house.png"
+              alt="Welaris"
+              width="750"
+                  height="521"
+            /></picture>
+          </div>
+          <div class="container">
+            <div class="block__content">
+              <div class="block__text">
+                Мы рады предложить вам совместить лечение и отдых в
+                комфортабельных номерах отделя Radisson Collection Paradise
+                Resort & Spa, Sochi - идеальное место для знакомства с Русской
+                Ривьерой. <br /><br />
+                Гостей ждут 508 номеров и 6 вилл с потрясающим видом на море и
+                горы, песчаный пляж.<br /><br />
+                Для гостей созданы идеальные условия для проходжения всех
+                лечебных и spa- процедур не покидая зоны отеля.
+              </div>
+              <div class="block__buttons">
+                <button class="button ">Условия проживания</button>
+              </div>
+            </div>
+            <picture class="block__img block__img_right"><source srcset="images/webp/welaris_house.webp" type="image/webp"><img
+              
+              src="images/png/welaris_house.png"
+              alt="Welaris"
+              width="750"
+              height="521"
+            /></picture>
+          </div>
+        </div>
+      </section>
+      <section class="connection">
+        <div class="container flex">
+          <div class="connection__div">
+            <form>
+              <div class="form-group">
+                <label for="name">Ваше имя*</label>
+                <input type="text" class="form-control" required id="name" />
+              </div>
+              <div class="form-group">
+                <label for="number">Ваш номер телефона*</label>
+                <input type="text" id="number" class="form-control" />
+              </div>
+              <div class="form-footer">
+                <button class="button" type="submit">Отправить</button>
+                <div class="form-group form-group-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    checked
+                    value=""
+                    id="check"
+                  />
+                  <label class="form-check-label" for="check">
+                    <a href="#">Согласие</a> на обработку персональных данных
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="connection__div">
+            <span
+              >Если у вас остались вопросы, свяжитесь с нами по телефону <a href="tel:+77956784567">+7 862
+                243 33 33</a> либо оставьте свои контакты, и мы вам перезвоним</span
+            >
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__content">
+            <div class="footer__item">
+              <div>
+                <img loading="lazy" src="images/svg/logo.svg" alt="Welaris"  width="261"
+                height="48"/>
+              </div>
+              <div class="footer__pins">
+                <div class="footer__pin">
+                  <img loading="lazy" src="images/svg/map-violet.svg" alt="Пин"  width="23"
+                  height="23"/>пгт Сириус,
+                  ул.65 лет Победы 50
+                </div>
+                <div class="footer__pin">
+                  <img loading="lazy" src="images/svg/phone-violet.svg" alt="Phone"  width="23"
+                  height="23"/>
+                  <a href="tel:+77956784567" class="telephone">+7 862 243 33 33</a>
+                </div>
+              </div>
+              <div class="footer__social">
+                <a href="#"><img loading="lazy" src="images/svg/vk-violet.svg" alt="Вк" width="30"
+                    height="30"/></a>
+                <a href="#"
+                  ><img loading="lazy" src="images/svg/telegram-violet.svg" alt="Телеграмм" width="30"
+                  height="30"
+                /></a>
+              </div>
+            </div>
+            <div class="footer__links_first">
+              <div>
+                <a href="methods.html">Методы лечения</a>
+                <a href="directions.html">Направления лечения</a>
+                <a href="programs.html">Программы лечения</a>
+                <a href="#">Косметология и SPA</a>
+                <a href="#">CheckUp-диагностика</a>
+                <a href="#">Специалисты</a>
+              </div>
+              <div>
+                <a href="about.html">О клинике</a>
+                <a href="#">Расположение</a>
+                <a href="#">Размещение</a>
+                <a href="#">Стоимость</a>
+                <a href="#">Контакты</a>
+              </div>
+            </div>
+            <div class="footer__links">
+              <a href="methods.html">Методы лечения</a>
+              <a href="directions.html">Направления лечения</a>
+              <a href="programs.html">Программы лечения</a>
+              <a href="#">Косметология и SPA</a>
+              <a href="#">CheckUp-диагностика</a>
+              <a href="#">Специалисты</a>
+            </div>
+            <div class="footer__links">
+              <a href="about.html">О клинике</a>
+              <a href="#">Расположение</a>
+              <a href="#">Размещение</a>
+              <a href="#">Стоимость</a>
+              <a href="#">Контакты</a>
+            </div>
+            <div class="footer__empty"></div>
+            <div>Лицензия № ЛО-26-01-04072757 от 8 октября 2021 г.</div>
+            <div class="footer__agreement">
+              <a href="#">Пользовательское соглашение</a
+              ><a href="#">Политика конфиденциальности</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__under">
+          <div class="container">
+            <span>© МЕДИЦИНСКИЙ ЦЕНТР «WELARIS», 2022</span>
+            <span>Имеются противопоказания. Проконсультируйтесь с врачом</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    
+      <div class="modal__action" id="modal__action">
+        <div class="modal-body">
+          <picture><source srcset="images/webp/action.webp" type="image/webp"><img loading="lazy" src="images/png/action.png" alt="Акция" width="616"
+          height="398"/></picture>
+          <div class="modal-content">
+            <div class="modal__heading">Лазерная эпиляция со скидкой</div>
+            <div class="modal__info">
+              Персонализированный подход к оздоровлению, с использованием
+              уникальных современных технологий диагностики и оздоровления
+            </div>
+            <button class="button">Подробнее</button>
+          </div>
+        </div>
+      
+    </div>
+
+    
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
