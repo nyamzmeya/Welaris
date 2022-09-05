@@ -21,10 +21,10 @@
             </div>
           </button>
           <div class="header__logo">
-            <a href="index.html"
-              ><img src="images/svg/logo.svg" alt="Welaris" class="img1" />
-              <img src="images/svg/logo_sm.svg" alt="Welaris" class="img2"
-            /></a>
+           <a href="index.html">  <img loading="lazy" src="images/svg/logo.svg" alt="Welaris" class="img1" width="262"
+            height="47"/>
+            <img loading="lazy" src="images/svg/logo_sm.svg" alt="Welaris" class="img2" width="164"
+            height="30" /></a>
           </div>
         </div>
         <ul class="header__links">
@@ -58,20 +58,22 @@
             class="toast_first_open telephone"
             data-text="+7 795 678 45 67"
             data-img="false"
-            data-href=""
-            ><img src="images/svg/phone.svg" alt="Телефон"
+            data-href="tel:+77956784567"
+            ><img loading="lazy" src="images/svg/phone.svg" alt="Телефон" width="30"
+            height="30"
           /></a>
           <a
             class="toast_first_open"
             data-text="пгт Сириус, ул.65 лет Победы 50"
             data-img="true"
-            href="#"
-            ><img src="images/svg/pin.svg" alt="Пин"
+            data-href=""
+            ><img loading="lazy" src="images/svg/pin.svg" alt="Пин" width="30"
+            height="30"
           /></a>
         </div>
         <div class="header__menu">
           <ul class="header__menu__links">
-            <li><a href="#">Услуги</a></li>
+            <li><a class="services__open" href="#">Услуги</a></li>
             <li><a href="#">Стоимость</a></li>
             <li><a href="programs.html">Программы лечения</a></li>
             <li><a href="methods.html">Методы лечения</a></li>
@@ -84,6 +86,23 @@
             <li><a href="#">Акции</a></li>
             <li><a href="#">Контакты</a></li>
           </ul>
+        </div>
+
+        <div class="toast toast_first">
+          <div class="toast__content">
+            <img loading="lazy"
+              class="toast_first__img"
+              src="images/svg/pin.svg"
+              alt="Место"
+              width="30"
+          height="30"
+            />
+            <span class="toast_first__text"></span>
+            <span class="toast_first__close toast__close"
+              ><img loading="lazy" src="images/svg/close.svg" alt="Закрыть" width="12"
+              height="12"
+            /></span>
+          </div>
         </div>
       </div>
     </header>
@@ -124,13 +143,26 @@
               </div>
               <div class="about__block__doc">
                 <a href="#"
-                  ><img src="images/svg/certificate 1.svg" alt="Лицензия"
+                  ><img
+                    src="images/svg/certificate 1.svg"
+                    alt="Лицензия"
+                    width="88"
+                    height="88"
                 /></a>
                 Лицензия № ЛО-26-01-04072757 от 8 октября 2021 г.
               </div>
             </div>
             <div class="about__block about__block_2">
-              <img src="images/png/welaris_house.webp" alt="Welaris" />
+              <picture
+                ><source
+                  srcset="images/webp/welaris_house.webp"
+                  type="image/webp" />
+                <img
+                  src="images/png/welaris_house.png"
+                  alt="Welaris"
+                  width="509"
+                  height="295"
+              /></picture>
               <div class="about__block__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -160,20 +192,7 @@
             </div>
           </div>
 
-          <div class="toast toast_page">
-            <div class="toast__content">
-              <img
-                loading="lazy"
-                class="toast_first__img"
-                src="images/svg/pin.svg"
-                alt="Место"
-              />
-              <span class="toast_first__text"></span>
-              <span class="toast_first__close toast__close"
-                ><img loading="lazy" src="images/svg/close.svg" alt="Закрыть"
-              /></span>
-            </div>
-          </div>
+         
         </div>
 
         <div class="about__bg"></div>
@@ -184,21 +203,33 @@
               <span>Правовая информация</span>
               <a class="block__arrow" href="#"
                 >Подробнее
-                <img src="images/svg/arrow_xs_right_violet.svg" alt="Перейти"
+                <img
+                  src="images/svg/arrow_xs_right_violet.svg"
+                  alt="Перейти"
+                  width="46"
+                  height="2"
               /></a>
             </div>
             <div class="about__flex__item">
               <span>Лицензия на осуществление медицинской деятельности</span>
               <a class="block__arrow" href="#"
                 >Подробнее
-                <img src="images/svg/arrow_xs_right_violet.svg" alt="Перейти"
+                <img
+                  src="images/svg/arrow_xs_right_violet.svg"
+                  alt="Перейти"
+                  width="46"
+                  height="2"
               /></a>
             </div>
             <div class="about__flex__item">
               <span>Вакансии</span>
               <a class="block__arrow" href="#"
                 >Подробнее
-                <img src="images/svg/arrow_xs_right_violet.svg" alt="Перейти"
+                <img
+                  src="images/svg/arrow_xs_right_violet.svg"
+                  alt="Перейти"
+                  width="46"
+                  height="2"
               /></a>
             </div>
           </div>
@@ -210,7 +241,12 @@
           <div class="footer__content">
             <div class="footer__item">
               <div>
-                <img src="images/svg/logo.svg" alt="Welaris" />
+                <img
+                  src="images/svg/logo_footer.svg"
+                  alt="Welaris"
+                  width="261"
+                  height="48"
+                />
               </div>
               <div class="footer__pins">
                 <div class="footer__pin">
@@ -289,7 +325,10 @@
 
     <div class="modal__action" id="modal__action">
       <div class="modal-body">
-        <img loading="lazy" src="images/png/action.webp" alt="Акция" />
+        <picture
+          ><source srcset="images/webp/action.webp" type="image/webp" />
+          <img loading="lazy" src="images/png/action.png" alt="Акция"
+        /></picture>
         <div class="modal-content">
           <div class="modal__heading">Лазерная эпиляция со скидкой</div>
           <div class="modal__info">

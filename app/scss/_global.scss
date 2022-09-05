@@ -212,16 +212,12 @@ body {
 
         }
 
-        @media (max-width: 425px) {
-            max-height: 190px;
-        }
+
     }
 
 
 
     &__img {
-        max-width: 751px;
-        max-height: 535px;
         align-self: flex-end;
 
         @media (max-width: 1300px) {
@@ -269,6 +265,7 @@ body {
         @media (max-width: 1024px) {
             padding-top: 30px !important;
             padding-bottom: 51px;
+
             .block__content {
                 margin-top: 0px !important;
             }
@@ -1070,7 +1067,7 @@ label {
     width: 358px;
 
     a {
-        color: $color-black;
+        color: $color-black !important;
     }
 
     @media (max-width: 768px) {
@@ -1083,26 +1080,26 @@ label {
             display: none;
         }
 
-        opacity: 0;
-        position: absolute;
-        top: -150px;
-        right: 0px;
-        box-shadow: 0px 10px 15px rgb(0 0 0 / 15%);
-
-    }
-
-    &_page {
-        @media (max-width: 768px) {
-            display: none;
+        a {
+            color: $color-black;
         }
 
         opacity: 0;
         position: absolute;
-        top: 0px;
+        top: 69px;
         right: 0px;
-        box-shadow: 0px 10px 15px rgb(0 0 0 / 15%);
         border: $color-violet;
+        background-color: $color-white;
+        box-shadow: 0px 10px 15px rgb(0 0 0 / 15%);
+        @media (max-width: 1440px) {
+            right: 95px;
+        }
+        @media (max-width: 1200px) {
+            right: 15px;
+        }
+
     }
+
 
     &_visible {
         opacity: 1;
@@ -1188,4 +1185,14 @@ ul.breadcrumb li a {
     &:hover {
         color: $color-dark;
     }
+}
+
+.info {
+    background: $color-gray;
+    padding-top: 101px;
+
+    @media (max-width: 768px) {
+        padding-top: 48px;
+    }
+
 }

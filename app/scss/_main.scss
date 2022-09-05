@@ -6,13 +6,11 @@
     color: $color-white;
     padding-bottom: 208px;
     position: relative;
-    background-image: url("../images/png/main_bg.webp");
+    background-image: url("../images/png/main_bg.png");
 
     &_video {
         background-image: none;
-        @media (max-width: 768px) {
-            background-image: url("../images/png/main_bg.webp");
-        }
+
     }
 
 
@@ -32,10 +30,18 @@
     &__toasts {
         position: absolute;
         top: -15px;
-        right: 95px;
+        right: 0px;
         display: flex;
         flex-direction: column;
         row-gap: 9px;
+
+        @media (max-width: 1440px) {
+            right: 95px;
+        }
+
+        @media (max-width: 1200px) {
+            right: 15px;
+        }
 
         @media (max-width: 1024px) {
             left: 15px;
@@ -185,15 +191,7 @@ input::-webkit-calendar-picker-indicator {
 
 
 
-.info {
-    background: $color-gray;
-    padding-top: 101px;
 
-    @media (max-width: 768px) {
-        padding-top: 48px;
-    }
-
-}
 
 .background-video {
     width: 100%;

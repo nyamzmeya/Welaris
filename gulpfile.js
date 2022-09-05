@@ -20,10 +20,17 @@ function browsersync() {
 }
 
 function images() {
-  return src(["app/img/**/*", "!app/img/**/*.svg"])
+  return src(["app/png"])
     .pipe(imagemin())
     .pipe(webp())
-    .pipe(dest("app/images"))
+    .pipe(dest("app/images/webp"))
+    .pipe(browserSync.stream());
+}
+
+function png() {
+  return src(["app/png"])
+    .pipe(imagemin())
+    .pipe(dest("app/images/png"))
     .pipe(browserSync.stream());
 }
 
@@ -81,7 +88,7 @@ function watching() {
   watch(["app/scss/**/*.scss"], styles);
   watch(["app/js/**/*.js", "!app/js/**/*.min.js"]).on("change", scripts);
   watch(["app/*.html"]).on("change", browserSync.reload);
-  watch(["app/img"]).on("change", images);
+  watch(["app/png"]).on("change", images, png);
 }
 
 exports.styles = styles;
@@ -91,4 +98,4 @@ exports.script = scripts;
 
 exports.images = images;
 
-exports.default = parallel(browsersync, watching, styles, scripts, images);
+exports.default = parallel(browsersync, watching, styles, scripts, images, png);

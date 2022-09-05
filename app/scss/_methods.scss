@@ -1,4 +1,3 @@
-
 .five {
     padding-top: 97px;
     padding-bottom: 96px;
@@ -127,6 +126,49 @@
         margin-bottom: 50px;
         width: 100%;
 
+        .splide__arrows {
+            .splide__arrow {
+                opacity: 1 !important;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                font-weight: 500;
+                border-radius: 0%;
+                top: 78%;
+            }
+
+            .splide__arrow--prev {
+                background-color: $color-white;
+                color: $color-violet;
+                left: calc(50% + 48px);
+                @media (max-width: 376px) {
+                    right: 50px;
+                    left: auto;
+                }
+
+                &::before {
+                    content: "\fe64";
+
+
+                }
+
+            }
+
+            .splide__arrow--next {
+                color: $color-white;
+                background-color: $color-violet;
+                right: calc(50% - 148px);
+                @media (max-width: 376px) {
+                    right: 0px;
+                }
+
+                &::before {
+                    content: "\fe65";
+
+                }
+            }
+        }
+
         @media (max-width: 768px) {
             margin-bottom: 0px;
         }
@@ -146,7 +188,7 @@
     }
 
     &__link {
-        opacity: 0;
+
         transition: 0.3s ease-in;
 
         @media (max-width: 768px) {
@@ -169,20 +211,27 @@
         margin-left: auto;
         margin-right: auto;
         cursor: pointer;
+        a {
+            color: $color-dark;
+        }
         
+
         @media (max-width: 768px) {
             text-align: center;
+        }
+
+        @media (max-width: 376px) {
+            width: 100%;
+            img {
+                width: 100%;
+            }
         }
 
         span {
             display: block;
         }
 
-        &:hover {
-            .persons__link {
-                opacity: 1;
-            }
-        }
+
 
     }
 }
@@ -190,8 +239,9 @@
 
 .floors {
     padding-bottom: 104px;
+
     @media (max-width: 1200px) {
-       padding-bottom: 50px;
+        padding-bottom: 50px;
     }
 }
 
@@ -223,7 +273,7 @@
             $rot: $rot+$angle;
         }
 
-     
+
     }
 }
 
@@ -236,6 +286,7 @@
         display: flex;
         flex-direction: column;
         row-gap: 23px;
+
         >* {
             transform: none !important;
             position: relative;
@@ -275,24 +326,25 @@
     }
 
     &:nth-child(1) {
-        background-image: url("../images/png/predictive.webp");
+        background-image: url("../images/png/predictive.png");
     }
 
     &:nth-child(2) {
-        background-image: url("../images/png/personofication.webp");
+        background-image: url("../images/png/personofication.png");
     }
 
     &:nth-child(3) {
-        background-image: url("../images/png/precautionary.webp");
+        background-image: url("../images/png/precautionary.png");
     }
 
     &:nth-child(4) {
-        background-image: url("../images/png/participatory.webp");
+        background-image: url("../images/png/participatory.png");
     }
 
     &:nth-child(5) {
-        background-image: url("../images/png/positivity.webp");
+        background-image: url("../images/png/positivity.png");
     }
+
     &:last-child {
         @media (max-width: 768px) {
             display: none;
